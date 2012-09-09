@@ -18,7 +18,9 @@ package com.google.android.apps.iosched.ui;
 
 import com.google.analytics.tracking.android.EasyTracker;
 import com.google.android.apps.iosched.Config;
-import com.google.android.apps.iosched.R;
+
+import gdg.devfest.Setup;
+import gdg.devfest.app.R;
 import com.google.android.apps.iosched.calendar.SessionAlarmService;
 import com.google.android.apps.iosched.calendar.SessionCalendarService;
 import com.google.android.apps.iosched.provider.ScheduleContract;
@@ -199,7 +201,7 @@ public class SessionDetailFragment extends SherlockFragment implements
                             mSessionBlockEnd);
                     intent.putExtra(SessionCalendarService.EXTRA_SESSION_TITLE, mTitleString);
                 }
-                intent.setClass(getActivity(), SessionCalendarService.class);
+                intent.setClass(getActivity(), Setup.SessionCalendarServiceClass);
                 getActivity().startService(intent);
             }
 

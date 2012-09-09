@@ -18,7 +18,9 @@ package com.google.android.apps.iosched.ui;
 
 import com.google.analytics.tracking.android.EasyTracker;
 import com.google.android.apps.iosched.Config;
-import com.google.android.apps.iosched.R;
+
+import gdg.devfest.Setup;
+import gdg.devfest.app.R;
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.provider.ScheduleContract.Sessions;
 import com.google.android.apps.iosched.provider.ScheduleContract.Tracks;
@@ -669,7 +671,7 @@ public class SessionLivestreamActivity extends BaseActivity implements
     private void navigateUpOrFinish() {
         if (mLoadFromExtras || isKeynote) {
             final Intent homeIntent = new Intent();
-            homeIntent.setClass(this, HomeActivity.class);
+            homeIntent.setClass(this, Setup.AccountActivityClass);
             NavUtils.navigateUpTo(this, homeIntent);
         } else if (mSessionUri != null) {
             final Intent parentIntent = new Intent(Intent.ACTION_VIEW, mSessionUri);

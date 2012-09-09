@@ -17,9 +17,11 @@
 package com.google.android.apps.iosched.ui;
 
 import com.google.analytics.tracking.android.EasyTracker;
-import com.google.android.apps.iosched.BuildConfig;
+
+import gdg.devfest.Setup;
+import gdg.devfest.app.BuildConfig;
 import com.google.android.apps.iosched.Config;
-import com.google.android.apps.iosched.R;
+import gdg.devfest.app.R;
 import com.google.android.apps.iosched.gcm.ServerUtilities;
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.ui.gtv.GoogleTVSessionLivestreamActivity;
@@ -93,7 +95,7 @@ public class HomeActivity extends BaseActivity implements
         // We're on Google TV; immediately short-circuit the normal behavior and show the
         // Google TV-specific landing page.
         if (UIUtils.isGoogleTV(this)) {
-            Intent intent = new Intent(HomeActivity.this, GoogleTVSessionLivestreamActivity.class);
+            Intent intent = new Intent(HomeActivity.this, Setup.GoogleTVSessionLivestreamActivityClass);
             startActivity(intent);
             finish();
         }
@@ -363,7 +365,7 @@ public class HomeActivity extends BaseActivity implements
                 return true;
 
             case R.id.menu_beam:
-                Intent beamIntent = new Intent(this, BeamActivity.class);
+                Intent beamIntent = new Intent(this, Setup.BeamActivityClass);
                 startActivity(beamIntent);
                 return true;
 

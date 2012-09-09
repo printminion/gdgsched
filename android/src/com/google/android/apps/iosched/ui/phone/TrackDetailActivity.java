@@ -17,7 +17,9 @@
 package com.google.android.apps.iosched.ui.phone;
 
 import com.google.analytics.tracking.android.EasyTracker;
-import com.google.android.apps.iosched.R;
+
+import gdg.devfest.Setup;
+import gdg.devfest.app.R;
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.ui.BaseActivity;
 import com.google.android.apps.iosched.ui.SessionsFragment;
@@ -179,7 +181,7 @@ public class TrackDetailActivity extends BaseActivity implements
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_social_stream:
-                Intent intent = new Intent(this, SocialStreamActivity.class);
+                Intent intent = new Intent(this, Setup.SocialStreamActivityClass);
                 intent.putExtra(SocialStreamFragment.EXTRA_QUERY,
                         UIUtils.getSessionHashtagsString(mTrackId));
                 startActivity(intent);

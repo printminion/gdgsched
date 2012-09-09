@@ -13,8 +13,14 @@
   See the License for the specific language governing permissions and
   limitations under the License.
   -->
+ <!-- 
+ 
+ mk: renamed   xmlns:iosched="http://schemas.android.com/apk/res/com.google.android.apps.iosched"
+ 	 to  xmlns:gdgsched="http://schemas.android.com/apk/res/gdg.devfest.app"
+ 
+   -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:iosched="http://schemas.android.com/apk/res/com.google.android.apps.iosched"
+    xmlns:iosched="http://schemas.android.com/apk/res/gdg.devfest.app"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"

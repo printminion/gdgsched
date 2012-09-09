@@ -16,6 +16,7 @@
 
 package com.google.android.apps.iosched.calendar;
 
+import gdg.devfest.Setup;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -33,7 +34,7 @@ public class SessionAlarmReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         Intent scheduleIntent = new Intent(
                 SessionAlarmService.ACTION_SCHEDULE_ALL_STARRED_BLOCKS,
-                null, context, SessionAlarmService.class);
+                null, context, Setup.SessionAlarmServiceClass);
         context.startService(scheduleIntent);
     }
 }

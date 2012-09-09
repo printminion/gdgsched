@@ -16,6 +16,8 @@
 
 package com.google.android.apps.iosched.util;
 
+import gdg.devfest.Setup;
+
 import com.google.android.apps.iosched.provider.ScheduleContract;
 
 import android.annotation.TargetApi;
@@ -37,7 +39,7 @@ import android.preference.PreferenceManager;
 public class BeamUtils {
 
     private static final byte[] DEFAULT_BEAM_MIME =
-            "application/vnd.google.iosched.default".getBytes();
+            ("application/vnd.google." + Setup.EVENT_PACKAGE_NAME + ".default").getBytes();
 
     private static final String PREF_BEAM_STATE = "beam_state";
     private static final int BEAM_STATE_UNLOCKED = 0x1481;

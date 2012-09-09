@@ -18,7 +18,9 @@ package com.google.android.apps.iosched.sync;
 
 import com.google.analytics.tracking.android.EasyTracker;
 import com.google.android.apps.iosched.Config;
-import com.google.android.apps.iosched.R;
+
+import gdg.devfest.Setup;
+import gdg.devfest.app.R;
 import com.google.android.apps.iosched.io.AnnouncementsHandler;
 import com.google.android.apps.iosched.io.BlocksHandler;
 import com.google.android.apps.iosched.io.HandlerException;
@@ -133,16 +135,16 @@ public class SyncHelper {
                 // Load static local data
                 batch.addAll(new RoomsHandler(mContext).parse(
                         JSONHandler.loadResourceJson(mContext, R.raw.rooms)));
-                batch.addAll(new BlocksHandler(mContext).parse(
-                        JSONHandler.loadResourceJson(mContext, R.raw.common_slots)));
+//                batch.addAll(new BlocksHandler(mContext).parse(
+//                        JSONHandler.loadResourceJson(mContext, R.raw.common_slots)));
                 batch.addAll(new TracksHandler(mContext).parse(
                         JSONHandler.loadResourceJson(mContext, R.raw.tracks)));
-                batch.addAll(new SpeakersHandler(mContext, true).parse(
-                        JSONHandler.loadResourceJson(mContext, R.raw.speakers)));
-                batch.addAll(new SessionsHandler(mContext, true, false).parse(
-                        JSONHandler.loadResourceJson(mContext, R.raw.sessions)));
-                batch.addAll(new SandboxHandler(mContext, true).parse(
-                        JSONHandler.loadResourceJson(mContext, R.raw.sandbox)));
+//                batch.addAll(new SpeakersHandler(mContext, true).parse(
+//                        JSONHandler.loadResourceJson(mContext, R.raw.speakers)));
+//                batch.addAll(new SessionsHandler(mContext, true, false).parse(
+//                        JSONHandler.loadResourceJson(mContext, R.raw.sessions)));
+//                batch.addAll(new SandboxHandler(mContext, true).parse(
+//                        JSONHandler.loadResourceJson(mContext, R.raw.sandbox)));
                 batch.addAll(new SearchSuggestHandler(mContext).parse(
                         JSONHandler.loadResourceJson(mContext, R.raw.search_suggest)));
                 prefs.edit().putInt("local_data_version", LOCAL_VERSION_CURRENT).commit();
@@ -240,7 +242,7 @@ public class SyncHelper {
 
     private void syncCalendar() {
         Intent intent = new Intent(SessionCalendarService.ACTION_UPDATE_ALL_SESSIONS_CALENDAR);
-        intent.setClass(mContext, SessionCalendarService.class);
+        intent.setClass(mContext, Setup.SessionCalendarServiceClass);
         mContext.startService(intent);
     }
 

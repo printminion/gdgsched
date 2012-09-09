@@ -16,7 +16,8 @@
 
 package com.google.android.apps.iosched.appwidget;
 
-import com.google.android.apps.iosched.R;
+import gdg.devfest.Setup;
+import gdg.devfest.app.R;
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.ui.HomeActivity;
 import com.google.android.apps.iosched.ui.SessionLivestreamActivity;
@@ -61,12 +62,11 @@ public class MyScheduleWidgetProvider extends AppWidgetProvider {
     public static final String EXTRA_BUTTON = "extra_button";
 
     public static final String CLICK_ACTION =
-            "com.google.android.apps.iosched.appwidget.action.CLICK";
+            Setup.EVENT_PACKAGE_NAME + ".appwidget.action.CLICK";
     public static final String REFRESH_ACTION =
-            "com.google.android.apps.iosched.appwidget.action.REFRESH";
+    		Setup.EVENT_PACKAGE_NAME + ".appwidget.action.REFRESH";
     public static final String EXTRA_PERFORM_SYNC =
-            "com.google.android.apps.iosched.appwidget.extra.PERFORM_SYNC";
-
+    		Setup.EVENT_PACKAGE_NAME + ".appwidget.extra.PERFORM_SYNC";
     private static Handler sWorkerQueue;
 
     // TODO: this will get destroyed when the app process is killed. need better observer strategy.
@@ -84,7 +84,7 @@ public class MyScheduleWidgetProvider extends AppWidgetProvider {
         final ContentResolver r = context.getContentResolver();
         if (sDataObserver == null) {
             final AppWidgetManager mgr = AppWidgetManager.getInstance(context);
-            final ComponentName cn = new ComponentName(context, MyScheduleWidgetProvider.class);
+            final ComponentName cn = new ComponentName(context, Setup.MyScheduleWidgetProviderClass);
             sDataObserver = new SessionDataProviderObserver(mgr, cn, sWorkerQueue);
             r.registerContentObserver(ScheduleContract.Sessions.CONTENT_URI, true, sDataObserver);
         }
@@ -113,7 +113,7 @@ public class MyScheduleWidgetProvider extends AppWidgetProvider {
                     // Update widget
                     final AppWidgetManager mgr = AppWidgetManager.getInstance(context);
                     final ComponentName cn = new ComponentName(context,
-                            MyScheduleWidgetProvider.class);
+                            Setup.MyScheduleWidgetProviderClass);
                     mgr.notifyAppWidgetViewDataChanged(mgr.getAppWidgetIds(cn),
                             R.id.widget_schedule_list);
                 }
@@ -176,7 +176,7 @@ public class MyScheduleWidgetProvider extends AppWidgetProvider {
                 Uri sessionUri = ScheduleContract.Sessions.buildSessionUri(starredSessionId);
                 LOGV(TAG, "sessionUri:" + sessionUri);
                 Intent intent = new Intent(Intent.ACTION_VIEW, sessionUri);
-                intent.setClass(context, SessionLivestreamActivity.class);
+                intent.setClass(context, Setup.SessionLivestreamActivityClass);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
@@ -190,7 +190,7 @@ public class MyScheduleWidgetProvider extends AppWidgetProvider {
         for (int appWidgetId : appWidgetIds) {
             // Specify the service to provide data for the collection widget.  Note that we need to
             // embed the appWidgetId via the data otherwise it will be ignored.
-            final Intent intent = new Intent(context, MyScheduleWidgetService.class);
+            final Intent intent = new Intent(context, Setup.MyScheduleWidgetServiceClass);
             intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
             intent.setData(Uri.parse(intent.toUri(Intent.URI_INTENT_SCHEME)));
             final RemoteViews rv = new RemoteViews(context.getPackageName(),
@@ -205,7 +205,7 @@ public class MyScheduleWidgetProvider extends AppWidgetProvider {
                     ? R.string.empty_widget_text
                     : R.string.empty_widget_text_signed_out));
 
-            final Intent onClickIntent = new Intent(context, MyScheduleWidgetProvider.class);
+            final Intent onClickIntent = new Intent(context, Setup.MyScheduleWidgetProviderClass);
             onClickIntent.setAction(MyScheduleWidgetProvider.CLICK_ACTION);
             onClickIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
             onClickIntent.setData(Uri.parse(onClickIntent.toUri(Intent.URI_INTENT_SCHEME)));
@@ -213,14 +213,14 @@ public class MyScheduleWidgetProvider extends AppWidgetProvider {
                     onClickIntent, PendingIntent.FLAG_UPDATE_CURRENT);
             rv.setPendingIntentTemplate(R.id.widget_schedule_list, onClickPendingIntent);
 
-            final Intent refreshIntent = new Intent(context, MyScheduleWidgetProvider.class);
+            final Intent refreshIntent = new Intent(context, Setup.MyScheduleWidgetProviderClass);
             refreshIntent.setAction(MyScheduleWidgetProvider.REFRESH_ACTION);
             refreshIntent.putExtra(MyScheduleWidgetProvider.EXTRA_PERFORM_SYNC, true);
             final PendingIntent refreshPendingIntent = PendingIntent.getBroadcast(context, 0,
                     refreshIntent, PendingIntent.FLAG_UPDATE_CURRENT);
             rv.setOnClickPendingIntent(R.id.widget_refresh_button, refreshPendingIntent);
 
-            final Intent openAppIntent = new Intent(context, HomeActivity.class);
+            final Intent openAppIntent = new Intent(context, Setup.HomeActivityClass);
             final PendingIntent openAppPendingIntent = PendingIntent.getActivity(context, 0,
                     openAppIntent, PendingIntent.FLAG_UPDATE_CURRENT);
             rv.setOnClickPendingIntent(R.id.widget_logo, openAppPendingIntent);

@@ -16,7 +16,8 @@
 
 package com.google.android.apps.iosched.util;
 
-import com.google.android.apps.iosched.R;
+import gdg.devfest.Setup;
+import gdg.devfest.app.R;
 import com.google.android.apps.iosched.calendar.SessionCalendarService;
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.ui.AccountActivity;
@@ -153,7 +154,7 @@ public class AccountUtils {
                     Toast.LENGTH_LONG).show();
             context.startService(
                     new Intent(SessionCalendarService.ACTION_CLEAR_ALL_SESSIONS_CALENDAR)
-                            .setClass(context, SessionCalendarService.class)
+                            .setClass(context, Setup.SessionCalendarServiceClass)
                             .putExtra(SessionCalendarService.EXTRA_ACCOUNT_NAME,
                                     getChosenAccountName(context)));
         }
@@ -166,7 +167,7 @@ public class AccountUtils {
     }
 
     public static void startAuthenticationFlow(final Context context, final Intent finishIntent) {
-        Intent loginFlowIntent = new Intent(context, AccountActivity.class);
+        Intent loginFlowIntent = new Intent(context, Setup.AccountActivityClass);
         loginFlowIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         loginFlowIntent.putExtra(AccountActivity.EXTRA_FINISH_INTENT, finishIntent);
         context.startActivity(loginFlowIntent);

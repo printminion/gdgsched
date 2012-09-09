@@ -16,7 +16,8 @@
 
 package com.google.android.apps.iosched.calendar;
 
-import com.google.android.apps.iosched.R;
+import gdg.devfest.Setup;
+import gdg.devfest.app.R;
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.util.AccountUtils;
 import com.google.android.apps.iosched.util.UIUtils;
@@ -51,25 +52,25 @@ public class SessionCalendarService extends IntentService {
     private static final String TAG = makeLogTag(SessionCalendarService.class);
 
     public static final String ACTION_ADD_SESSION_CALENDAR =
-            "com.google.android.apps.iosched.action.ADD_SESSION_CALENDAR";
+            Setup.EVENT_PACKAGE_NAME + ".action.ADD_SESSION_CALENDAR";
     public static final String ACTION_REMOVE_SESSION_CALENDAR =
-            "com.google.android.apps.iosched.action.REMOVE_SESSION_CALENDAR";
+            Setup.EVENT_PACKAGE_NAME + ".action.REMOVE_SESSION_CALENDAR";
     public static final String ACTION_UPDATE_ALL_SESSIONS_CALENDAR =
-            "com.google.android.apps.iosched.action.UPDATE_ALL_SESSIONS_CALENDAR";
+            Setup.EVENT_PACKAGE_NAME + ".action.UPDATE_ALL_SESSIONS_CALENDAR";
     public static final String ACTION_UPDATE_ALL_SESSIONS_CALENDAR_COMPLETED =
-            "com.google.android.apps.iosched.action.UPDATE_CALENDAR_COMPLETED";
+            Setup.EVENT_PACKAGE_NAME + ".action.UPDATE_CALENDAR_COMPLETED";
     public static final String ACTION_CLEAR_ALL_SESSIONS_CALENDAR =
-            "com.google.android.apps.iosched.action.CLEAR_ALL_SESSIONS_CALENDAR";
+            Setup.EVENT_PACKAGE_NAME + ".action.CLEAR_ALL_SESSIONS_CALENDAR";
     public static final String EXTRA_ACCOUNT_NAME =
-            "com.google.android.apps.iosched.extra.ACCOUNT_NAME";
+            Setup.EVENT_PACKAGE_NAME + ".extra.ACCOUNT_NAME";
     public static final String EXTRA_SESSION_BLOCK_START =
-            "com.google.android.apps.iosched.extra.SESSION_BLOCK_START";
+            Setup.EVENT_PACKAGE_NAME + ".extra.SESSION_BLOCK_START";
     public static final String EXTRA_SESSION_BLOCK_END =
-            "com.google.android.apps.iosched.extra.SESSION_BLOCK_END";
+            Setup.EVENT_PACKAGE_NAME + ".extra.SESSION_BLOCK_END";
     public static final String EXTRA_SESSION_TITLE =
-            "com.google.android.apps.iosched.extra.SESSION_TITLE";
+            Setup.EVENT_PACKAGE_NAME + ".extra.SESSION_TITLE";
     public static final String EXTRA_SESSION_ROOM =
-            "com.google.android.apps.iosched.extra.SESSION_ROOM";
+            Setup.EVENT_PACKAGE_NAME + ".extra.SESSION_ROOM";
 
     private static final long INVALID_CALENDAR_ID = -1;
 

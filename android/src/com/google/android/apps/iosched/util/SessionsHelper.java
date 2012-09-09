@@ -17,7 +17,9 @@
 package com.google.android.apps.iosched.util;
 
 import com.google.analytics.tracking.android.EasyTracker;
-import com.google.android.apps.iosched.R;
+
+import gdg.devfest.Setup;
+import gdg.devfest.app.R;
 import com.google.android.apps.iosched.appwidget.MyScheduleWidgetProvider;
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.sync.ScheduleUpdaterService;
@@ -35,6 +37,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
+import android.service.textservice.SpellCheckerService.Session;
 import android.support.v4.app.ShareCompat;
 
 import static com.google.android.apps.iosched.util.LogUtils.LOGD;
@@ -120,12 +123,12 @@ public final class SessionsHelper {
 
         // Because change listener is set to null during initialization, these
         // won't fire on pageview.
-        final Intent refreshIntent = new Intent(mActivity, MyScheduleWidgetProvider.class);
+        final Intent refreshIntent = new Intent(mActivity, Setup.MyScheduleWidgetProviderClass);
         refreshIntent.setAction(MyScheduleWidgetProvider.REFRESH_ACTION);
         mActivity.sendBroadcast(refreshIntent);
 
         // Sync to the cloud.
-        final Intent updateServerIntent = new Intent(mActivity, ScheduleUpdaterService.class);
+        final Intent updateServerIntent = new Intent(mActivity, Setup.ScheduleUpdaterServiceClass);
         updateServerIntent.putExtra(ScheduleUpdaterService.EXTRA_SESSION_ID,
                 ScheduleContract.Sessions.getSessionId(sessionUri));
         updateServerIntent.putExtra(ScheduleUpdaterService.EXTRA_IN_SCHEDULE, starred);
@@ -133,7 +136,7 @@ public final class SessionsHelper {
     }
 
     public void startSocialStream(String hashtags) {
-        Intent intent = new Intent(mActivity, SocialStreamActivity.class);
+        Intent intent = new Intent(mActivity, Setup.SocialStreamActivityClass);
         intent.putExtra(SocialStreamFragment.EXTRA_QUERY, hashtags);
         mActivity.startActivity(intent);
     }

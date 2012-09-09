@@ -17,7 +17,9 @@
 package com.google.android.apps.iosched.ui.tablet;
 
 import com.google.analytics.tracking.android.EasyTracker;
-import com.google.android.apps.iosched.R;
+
+import gdg.devfest.Setup;
+import gdg.devfest.app.R;
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.ui.BaseActivity;
 import com.google.android.apps.iosched.ui.SessionDetailFragment;
@@ -65,7 +67,7 @@ public class SessionsVendorsMultiPaneActivity extends BaseActivity implements
         TrackInfoHelperFragment.Callbacks {
 
     public static final String EXTRA_MASTER_URI =
-            "com.google.android.apps.iosched.extra.MASTER_URI";
+    		Setup.EVENT_PACKAGE_NAME + ".extra.MASTER_URI";
 
     private static final String STATE_VIEW_TYPE = "view_type";
 

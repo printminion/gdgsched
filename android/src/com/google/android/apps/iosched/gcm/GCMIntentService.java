@@ -16,9 +16,10 @@
 
 package com.google.android.apps.iosched.gcm;
 
-import com.google.android.apps.iosched.BuildConfig;
+import gdg.devfest.Setup;
+import gdg.devfest.app.BuildConfig;
 import com.google.android.apps.iosched.Config;
-import com.google.android.apps.iosched.R;
+import gdg.devfest.app.R;
 import com.google.android.apps.iosched.sync.TriggerSyncReceiver;
 import com.google.android.apps.iosched.ui.HomeActivity;
 import com.google.android.apps.iosched.util.UIUtils;
@@ -116,7 +117,7 @@ public class GCMIntentService extends GCMBaseIntentService {
                         .setContentText(message)
                         .setContentIntent(
                                 PendingIntent.getActivity(context, 0,
-                                        new Intent(context, HomeActivity.class)
+                                        new Intent(context, Setup.AccountActivityClass)
                                                 .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |
                                                         Intent.FLAG_ACTIVITY_SINGLE_TOP),
                                         0))

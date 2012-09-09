@@ -16,7 +16,8 @@
 
 package com.google.android.apps.iosched.calendar;
 
-import com.google.android.apps.iosched.R;
+import gdg.devfest.Setup;
+import gdg.devfest.app.R;
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.util.UIUtils;
 
@@ -47,17 +48,17 @@ public class SessionAlarmService extends IntentService {
     private static final String TAG = makeLogTag(SessionAlarmService.class);
 
     public static final String ACTION_NOTIFY_SESSION =
-            "com.google.android.apps.iosched.action.NOTIFY_SESSION";
+            Setup.EVENT_PACKAGE_NAME + ".action.NOTIFY_SESSION";
     public static final String ACTION_SCHEDULE_STARRED_BLOCK =
-            "com.google.android.apps.iosched.action.SCHEDULE_STARRED_BLOCK";
+            Setup.EVENT_PACKAGE_NAME + ".action.SCHEDULE_STARRED_BLOCK";
     public static final String ACTION_SCHEDULE_ALL_STARRED_BLOCKS =
-            "com.google.android.apps.iosched.action.SCHEDULE_ALL_STARRED_BLOCKS";
+            Setup.EVENT_PACKAGE_NAME + ".action.SCHEDULE_ALL_STARRED_BLOCKS";
     public static final String EXTRA_SESSION_START =
-            "com.google.android.apps.iosched.extra.SESSION_START";
+            Setup.EVENT_PACKAGE_NAME + ".extra.SESSION_START";
     public static final String EXTRA_SESSION_END =
-            "com.google.android.apps.iosched.extra.SESSION_END";
+            Setup.EVENT_PACKAGE_NAME + ".extra.SESSION_END";
     public static final String EXTRA_SESSION_ALARM_OFFSET =
-            "com.google.android.apps.iosched.extra.SESSION_ALARM_OFFSET";
+            Setup.EVENT_PACKAGE_NAME + ".extra.SESSION_ALARM_OFFSET";
 
     private static final int NOTIFICATION_ID = 100;
 
@@ -130,7 +131,7 @@ public class SessionAlarmService extends IntentService {
                 ACTION_NOTIFY_SESSION,
                 null,
                 this,
-                SessionAlarmService.class);
+                Setup.SessionAlarmServiceClass);
 
         // Setting data to ensure intent's uniqueness for different session start times.
         alarmIntent.setData(
@@ -270,7 +271,7 @@ public class SessionAlarmService extends IntentService {
             final int snoozeMinutes) {
         Intent scheduleIntent = new Intent(
                 SessionAlarmService.ACTION_SCHEDULE_STARRED_BLOCK,
-                null, this, SessionAlarmService.class);
+                null, this, Setup.SessionAlarmServiceClass);
         scheduleIntent.putExtra(SessionAlarmService.EXTRA_SESSION_START, sessionStart);
         scheduleIntent.putExtra(SessionAlarmService.EXTRA_SESSION_END, sessionEnd);
         scheduleIntent.putExtra(SessionAlarmService.EXTRA_SESSION_ALARM_OFFSET,

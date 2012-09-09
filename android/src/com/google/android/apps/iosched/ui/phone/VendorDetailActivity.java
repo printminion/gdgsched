@@ -16,6 +16,8 @@
 
 package com.google.android.apps.iosched.ui.phone;
 
+import gdg.devfest.Setup;
+
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.ui.HomeActivity;
 import com.google.android.apps.iosched.ui.SimpleSinglePaneActivity;
@@ -59,7 +61,7 @@ public class VendorDetailActivity extends SimpleSinglePaneActivity implements
                 parentIntent = new Intent(Intent.ACTION_VIEW,
                         ScheduleContract.Tracks.buildTrackUri(mTrackId));
             } else {
-                parentIntent = new Intent(this, HomeActivity.class);
+                parentIntent = new Intent(this, Setup.AccountActivityClass);
             }
 
             NavUtils.navigateUpTo(this, parentIntent);

@@ -27,6 +27,8 @@ import android.os.Looper;
 import android.os.Message;
 import android.widget.Toast;
 
+import gdg.devfest.Setup;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -49,9 +51,9 @@ public class ScheduleUpdaterService extends Service {
     private static final String TAG = makeLogTag(ScheduleUpdaterService.class);
 
     public static final String EXTRA_SESSION_ID
-            = "com.google.android.apps.iosched.extra.SESSION_ID";
+            = Setup.EVENT_PACKAGE_NAME + "extra.SESSION_ID";
     public static final String EXTRA_IN_SCHEDULE
-            = "com.google.android.apps.iosched.extra.IN_SCHEDULE";
+            = Setup.EVENT_PACKAGE_NAME + "extra.IN_SCHEDULE";
 
     private static final int SCHEDULE_UPDATE_DELAY_MILLIS = 5000;
 

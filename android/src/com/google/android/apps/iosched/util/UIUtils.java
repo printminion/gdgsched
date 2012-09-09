@@ -16,17 +16,14 @@
 
 package com.google.android.apps.iosched.util;
 
-import com.google.android.apps.iosched.BuildConfig;
-import com.google.android.apps.iosched.R;
-import com.google.android.apps.iosched.provider.ScheduleContract.Blocks;
-import com.google.android.apps.iosched.provider.ScheduleContract.Rooms;
-import com.google.android.apps.iosched.ui.phone.MapActivity;
-import com.google.android.apps.iosched.ui.phone.SessionDetailActivity;
-import com.google.android.apps.iosched.ui.phone.SessionsActivity;
-import com.google.android.apps.iosched.ui.phone.TrackDetailActivity;
-import com.google.android.apps.iosched.ui.phone.VendorDetailActivity;
-import com.google.android.apps.iosched.ui.tablet.MapMultiPaneActivity;
-import com.google.android.apps.iosched.ui.tablet.SessionsVendorsMultiPaneActivity;
+import gdg.devfest.Setup;
+import gdg.devfest.app.BuildConfig;
+import gdg.devfest.app.R;
+
+import java.util.Calendar;
+import java.util.Formatter;
+import java.util.Locale;
+import java.util.TimeZone;
 
 import android.annotation.TargetApi;
 import android.content.ActivityNotFoundException;
@@ -54,10 +51,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Calendar;
-import java.util.Formatter;
-import java.util.Locale;
-import java.util.TimeZone;
+import com.google.android.apps.iosched.provider.ScheduleContract.Blocks;
+import com.google.android.apps.iosched.provider.ScheduleContract.Rooms;
 
 /**
  * An assortment of UI helpers.
@@ -67,14 +62,12 @@ public class UIUtils {
      * Time zone to use when formatting all session times. To always use the
      * phone local time, use {@link TimeZone#getDefault()}.
      */
-    public static final TimeZone CONFERENCE_TIME_ZONE = TimeZone.getTimeZone("America/Los_Angeles");
+    public static final TimeZone CONFERENCE_TIME_ZONE = Setup.CONFERENCE_TIME_ZONE;
 
-    public static final long CONFERENCE_START_MILLIS = ParserUtils.parseTime(
-            "2012-06-27T09:30:00.000-07:00");
-    public static final long CONFERENCE_END_MILLIS = ParserUtils.parseTime(
-            "2012-06-29T18:00:00.000-07:00");
+    public static final long CONFERENCE_START_MILLIS = Setup.CONFERENCE_START_MILLIS;
+    public static final long CONFERENCE_END_MILLIS = Setup.CONFERENCE_END_MILLIS;
 
-    public static final String CONFERENCE_HASHTAG = "#io12";
+    public static final String CONFERENCE_HASHTAG = Setup.CONFERENCE_HASHTAG;
 
     private static final int SECOND_MILLIS = 1000;
     private static final int MINUTE_MILLIS = 60 * SECOND_MILLIS;
@@ -359,17 +352,17 @@ public class UIUtils {
 
     // TODO: use <meta-data> element instead
     private static final Class[] sPhoneActivities = new Class[]{
-            MapActivity.class,
-            SessionDetailActivity.class,
-            SessionsActivity.class,
-            TrackDetailActivity.class,
-            VendorDetailActivity.class,
+            Setup.MapActivityClass,
+            Setup.SessionDetailActivityClass,
+            Setup.SessionsActivityClass,
+            Setup.TrackDetailActivityClass,
+            Setup.VendorDetailActivityClass,
     };
 
     // TODO: use <meta-data> element instead
     private static final Class[] sTabletActivities = new Class[]{
-            MapMultiPaneActivity.class,
-            SessionsVendorsMultiPaneActivity.class,
+    		Setup.MapMultiPaneActivityClass,
+    		Setup.SessionsVendorsMultiPaneActivityClass,
     };
 
     public static void enableDisableActivities(final Context context) {
@@ -397,10 +390,10 @@ public class UIUtils {
 
     public static Class getMapActivityClass(Context context) {
         if (UIUtils.isHoneycombTablet(context)) {
-            return MapMultiPaneActivity.class;
+            return Setup.MapMultiPaneActivityClass;
         }
 
-        return MapActivity.class;
+        return Setup.MapActivityClass;
     }
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)

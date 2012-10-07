@@ -18,6 +18,8 @@ package com.google.android.apps.iosched.ui;
 
 import com.google.analytics.tracking.android.EasyTracker;
 import gdg.devfest.app.R;
+
+import com.google.android.apps.iosched.Config;
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.ui.TracksAdapter.TracksQuery;
 import com.google.android.apps.iosched.util.UIUtils;
@@ -160,7 +162,7 @@ public class ExploreFragment extends SherlockListFragment implements
             return;
         }
 
-        mAdapter.setHasMapItem(true);
+        mAdapter.setHasMapItem(Config.FEATURE_MAP_ENABLED);
         mAdapter.setHasAllItem(true);
         mAdapter.changeCursor(cursor);
     }

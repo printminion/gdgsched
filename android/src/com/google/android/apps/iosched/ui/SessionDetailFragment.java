@@ -91,6 +91,7 @@ public class SessionDetailFragment extends SherlockFragment implements
 
     private boolean mStarred;
     private boolean mInitStarred;
+    private MenuItem mMapMenuItem;
     private MenuItem mShareMenuItem;
     private MenuItem mStarMenuItem;
     private MenuItem mSocialStreamMenuItem;
@@ -268,6 +269,12 @@ public class SessionDetailFragment extends SherlockFragment implements
 
         mPlusOneButton.setSize(PlusOneButton.Size.TALL);
         String url = cursor.getString(SessionsQuery.URL);
+        /*
+         * remove plus one button while no session URL is there
+         */
+        if (!Config.FEATURE_SESSION_URL_ENABLED) {
+        	url = "";
+        }
         if (TextUtils.isEmpty(url)) {
             mPlusOneButton.setVisibility(View.GONE);
         } else {
@@ -326,12 +333,23 @@ public class SessionDetailFragment extends SherlockFragment implements
             linksContainer.addView(linkContainer);
         }
 
+        
         // Render normal links
         for (int i = 0; i < SessionsQuery.LINKS_INDICES.length; i++) {
-            final String linkUrl = cursor.getString(SessionsQuery.LINKS_INDICES[i]);
+    
+            /*
+             * skip Session links if feature disabled
+             */
+            if (!Config.FEATURE_SESSION_URL_ENABLED) {
+            	if (SessionsQuery.LINKS_TITLES[i] == R.string.session_link_main) {
+            		continue;
+            	}
+            }
+            
+        	final String linkUrl = cursor.getString(SessionsQuery.LINKS_INDICES[i]);
             if (!TextUtils.isEmpty(linkUrl)) {
                 hasLinks = true;
-
+                
                 // Create the link item
                 ViewGroup linkContainer = (ViewGroup)
                         inflater.inflate(R.layout.list_item_session_link, linksContainer, false);
@@ -397,9 +415,15 @@ public class SessionDetailFragment extends SherlockFragment implements
         mDeferredUiOperations.add(new Runnable() {
             @Override
             public void run() {
+            	if (Config.FEATURE_SESSION_URL_ENABLED) {
                 new SessionsHelper(getActivity())
                         .tryConfigureShareMenuItem(mShareMenuItem, R.string.share_template,
                                 mTitleString, mHashtags, mUrl);
+            	} else {
+                    new SessionsHelper(getActivity())
+                    .tryConfigureShareMenuItem(mShareMenuItem, R.string.share_template,
+                            mTitleString, mHashtags, "");
+            	}
             }
         });
         tryExecuteDeferredUiOperations();
@@ -492,6 +516,12 @@ public class SessionDetailFragment extends SherlockFragment implements
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.session_detail, menu);
+        
+        mMapMenuItem = menu.findItem(R.id.menu_map);
+        if (!Config.FEATURE_MAP_ENABLED) {
+        	mMapMenuItem.setVisible(false);
+        }
+        
         mStarMenuItem = menu.findItem(R.id.menu_star);
         mSocialStreamMenuItem = menu.findItem(R.id.menu_social_stream);
         mShareMenuItem = menu.findItem(R.id.menu_share);
@@ -531,8 +561,13 @@ public class SessionDetailFragment extends SherlockFragment implements
             case R.id.menu_share:
                 // On ICS+ devices, we normally won't reach this as ShareActionProvider will handle
                 // sharing.
+            	if (Config.FEATURE_SESSION_URL_ENABLED) {
                 helper.shareSession(getActivity(), R.string.share_template, mTitleString,
                         mHashtags, mUrl);
+            	} else {
+                    helper.shareSession(getActivity(), R.string.share_template, mTitleString,
+                            mHashtags, "");            		
+            	}
                 return true;
 
             case R.id.menu_social_stream:

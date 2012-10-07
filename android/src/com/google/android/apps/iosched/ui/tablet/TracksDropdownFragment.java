@@ -17,6 +17,8 @@
 package com.google.android.apps.iosched.ui.tablet;
 
 import gdg.devfest.app.R;
+
+import com.google.android.apps.iosched.Config;
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.ui.TracksAdapter;
 import com.google.android.apps.iosched.util.UIUtils;
@@ -286,7 +288,7 @@ public class TracksDropdownFragment extends SherlockFragment implements
             loadTrack(null, false);
         }
 
-        mAdapter.setHasAllItem(true);
+        mAdapter.setHasAllItem(Config.FEATURE_MAP_ENABLED);
         mAdapter.changeCursor(cursor);
     }
 

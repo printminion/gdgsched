@@ -18,6 +18,8 @@ package com.google.android.apps.iosched.ui;
 
 import com.google.analytics.tracking.android.EasyTracker;
 import gdg.devfest.app.R;
+
+import com.google.android.apps.iosched.Config;
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.util.SessionsHelper;
 import com.google.android.apps.iosched.util.UIUtils;
@@ -321,11 +323,19 @@ public class SessionsFragment extends SherlockListFragment implements
                 // On ICS+ devices, we normally won't reach this as ShareActionProvider will handle
                 // sharing.
                 Cursor cursor = (Cursor) mAdapter.getItem(position);
+                if (Config.FEATURE_SESSION_URL_ENABLED) {
                 new SessionsHelper(getActivity()).shareSession(getActivity(),
                         R.string.share_template,
                         cursor.getString(SessionsQuery.TITLE),
                         cursor.getString(SessionsQuery.HASHTAGS),
                         cursor.getString(SessionsQuery.URL));
+                } else {
+                    new SessionsHelper(getActivity()).shareSession(getActivity(),                	
+                    R.string.share_template,
+                    cursor.getString(SessionsQuery.TITLE),
+                    cursor.getString(SessionsQuery.HASHTAGS),
+                    "");
+                }
                 return true;
             }
             case R.id.menu_social_stream:
@@ -362,6 +372,9 @@ public class SessionsFragment extends SherlockListFragment implements
         inflater.inflate(R.menu.sessions_context, menu);
         mStarredMenuItem = menu.findItem(R.id.menu_star);
         mMapMenuItem = menu.findItem(R.id.menu_map);
+        
+        mMapMenuItem.setVisible(Config.FEATURE_MAP_ENABLED);
+        
         mShareMenuItem = menu.findItem(R.id.menu_share);
         mSocialStreamMenuItem = menu.findItem(R.id.menu_social_stream);
         mSelectedSessionPositions.clear();
@@ -391,8 +404,10 @@ public class SessionsFragment extends SherlockListFragment implements
 
         if (numSelectedSessions == 1) {
             // activate all the menu item
-            mMapMenuItem.setVisible(true);
-            mShareMenuItem.setVisible(true);
+            if (Config.FEATURE_MAP_ENABLED) {
+            	mMapMenuItem.setVisible(true);
+            }
+        	mShareMenuItem.setVisible(true);
             mSocialStreamMenuItem.setVisible(true);
             mStarredMenuItem.setVisible(true);
             position = mSelectedSessionPositions.iterator().next();

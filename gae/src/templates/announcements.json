@@ -1,0 +1,408 @@
+{
+ "announcements": [
+  {
+   "date": 1341005340,
+   "title": "Watch the Google I/O keynotes and session videos",
+   "link": "https://developers.google.com/events/io/sessions",
+   "summary": "Videos continue to be posted on the site, so keep checking back for updates!"
+  },
+  {
+   "date": 1341000720,
+   "tracks": [
+    "Ads/Analytics"
+   ],
+   "title": "Introducing Google Analytics app for Android",
+   "link": "http://analytics.blogspot.com/2012/06/data-at-your-fingertips-announcing.html",
+   "summary": "Google Analytics app for Android enables users to access their Analytics accounts on the go with reports optimized for mobile devices."
+  },
+  {
+   "date": 1340992620,
+   "title": "Help translate the amazing Google Glass demo into your language",
+   "link": "http://goo.gl/IIftQ",
+   "summary": ""
+  },
+  {
+   "date": 1340985900,
+   "tracks": [
+    "Ads/Analytics"
+   ],
+   "title": "Announcing Mobile App Analytics",
+   "link": "http://analytics.blogspot.com/2012/06/measuring-mobile-world-introducing.html",
+   "summary": "Mobile App Analytics helps app developers and marketers measure the end-to-end engagement and value of their mobile apps."
+  },
+  {
+   "date": 1340926020,
+   "title": "Avoid heading back to your hotel too early by checking out some of our Community Events taking place tonight",
+   "link": "https://developers.google.com/events/io/community-events",
+   "summary": ""
+  },
+  {
+   "date": 1340924400,
+   "tracks": [
+    "Geo APIs"
+   ],
+   "title": "Enhancements to Styled Maps added to Google Maps API",
+   "link": "http://googlegeodevelopers.blogspot.com/2012/06/google-maps-api-now-with-even-more.html",
+   "summary": "The latest version of the Google Maps API (v. 3) is launching an explicit color styler and extending its set of element selectors to provide finer grained control over how features are restyled."
+  },
+  {
+   "date": 1340920980,
+   "title": "Day 1 keynote video is live on YouTube",
+   "link": "http://www.youtube.com/watch?v=VuC0i4xTyrI",
+   "summary": "Watch it again, or see it for the first time."
+  },
+  {
+   "date": 1340917200,
+   "tracks": [
+    "Google TV"
+   ],
+   "title": "Google Play update, new developer tools",
+   "link": "http://googletv.blogspot.com/2012/06/more-entertainment-choices-with-google.html",
+   "summary": "Google Play app now offers movies and shows, new developer tools available for Google TV."
+  },
+  {
+   "date": 1340915460,
+   "tracks": [
+    "Chrome Web Store"
+   ],
+   "title": "Chrome makes updates to Apps ecosystem",
+   "summary": "Further enhancements to our apps platform for Chrome, evolving packaged apps architecture with improved capabilities, enhanced offline mode, and new access points."
+  },
+  {
+   "date": 1340915400,
+   "tracks": [
+    "Google+"
+   ],
+   "title": "Google+ Platform for Mobile",
+   "link": "http://googleplusplatform.blogspot.com/2012/06/extending-google-platform-to-mobile.html",
+   "summary": "Announcing the Google+ platform for mobile, including SDKs for Android and iOS (available soon), and mobile web optimized social plugins (available now)."
+  },
+  {
+   "date": 1340910000,
+   "tracks": [
+    "Geo APIs"
+   ],
+   "title": "Heat Maps and Symbols added to Google Maps API",
+   "link": "http://googlegeodevelopers.blogspot.com/2012/06/powerful-data-visualization-with.html",
+   "summary": "The latest version of the Google Maps API (v. 3) offers improved data visualization and interactivity for developers with the additions of Heat Maps and Symbols."
+  },
+  {
+   "date": 1340909100,
+   "title": "New sessions from Chrome & Cloud Platform have just gone live to the schedule.",
+   "link": "https://plus.google.com/u/1/b/111395306401981598462/111395306401981598462/posts/Cbd4TVXTi95",
+   "summary": ""
+  },
+  {
+   "date": 1340907300,
+   "title": "Sergey Brin and the jumpers redux!",
+   "summary": "Today we're on the roof of Moscone Center with Sergey watching from behind the scenes. Another great jump live in a Google+ Hangout via Google Glass."
+  },
+  {
+   "date": 1340906400,
+   "tracks": [
+    "Chrome"
+   ],
+   "title": "New Web platform innovations: Google and Cirque du Soleil",
+   "summary": "A collaboration between Google and Cirque du Soleil shows off a host of new web platform capabilities that wouldn’t have been possible a year ago."
+  },
+  {
+   "date": 1340905680,
+   "tracks": [
+    "Cloud"
+   ],
+   "title": "Google Compute Engine launches",
+   "link": "http://googledevelopers.blogspot.com/2012/06/google-compute-engine-computing-without.html",
+   "summary": "Google's VM offering, Google Compute Engine, launches to limited preview."
+  },
+  {
+   "date": 1340905500,
+   "tracks": [
+    "Chrome"
+   ],
+   "title": "Chromebooks on sale at Best Buy in the U.S.",
+   "summary": "For those who want to try the Chromebook first-hand, we’re expanding the Chrome Zone experience centers to include select Best Buy stores around the U.S."
+  },
+  {
+   "date": 1340905020,
+   "tracks": [
+    "Apps"
+   ],
+   "title": "Google Docs Offline",
+   "link": "http://googleblog.blogspot.com/2012/06/chrome-apps-google-io-your-web.html",
+   "summary": "Now access Google Docs offline from any device."
+  },
+  {
+   "date": 1340904780,
+   "tracks": [
+    "Apps"
+   ],
+   "title": "Google Drive for iOS",
+   "link": "http://googleblog.blogspot.com/2012/06/chrome-apps-google-io-your-web.html",
+   "summary": "Google Drive is now available for your iPhone, iPad, and iPod Touch."
+  },
+  {
+   "date": 1340904000,
+   "title": "Watch the Chrome Keynote on YouTube",
+   "link": "http://youtube.com/googledevelopers",
+   "summary": "An alternate link for your viewing pleasure"
+  },
+  {
+   "date": 1340903760,
+   "tracks": [
+    "Chrome"
+   ],
+   "title": "Chrome for iOS",
+   "link": "http://googleblog.blogspot.com/2012/06/chrome-apps-google-io-your-web.html",
+   "summary": "Chrome is now available for your iPhone, iPad, and iPod Touch."
+  },
+  {
+   "date": 1340903640,
+   "tracks": [
+    "Chrome"
+   ],
+   "title": "Chrome for Android moves to Stable",
+   "link": "http://googleblog.blogspot.com/2012/06/chrome-apps-google-io-your-web.html",
+   "summary": "Chrome for Android is moving out of Beta to Stable."
+  },
+  {
+   "date": 1340903520,
+   "tracks": [
+    "Chrome"
+   ],
+   "title": "Chrome now has 310M active users worldwide",
+   "link": "http://googleblog.blogspot.com/2012/06/chrome-apps-google-io-your-web.html",
+   "summary": "Up from 160M users announced at last year's Google I/O."
+  },
+  {
+   "date": 1340901900,
+   "title": "Hello to I/O Live and I/O Extended participants around the world",
+   "summary": "The keynote will begin in 15 minutes."
+  },
+  {
+   "date": 1340894400,
+   "title": "Welcome to Google I/O, Day 2",
+   "summary": "Join us for today's keynote at 10 AM PDT."
+  },
+  {
+   "date": 1340848500,
+   "tracks": [
+    "Google I/O"
+   ],
+   "title": "Whew! Time to put those laptops down.",
+   "link": "http://developers.google.com/io",
+   "summary": "Learning's done for the day. We're heading to After Hours!"
+  },
+  {
+   "date": 1340842500,
+   "tracks": [
+    "Accessibility"
+   ],
+   "title": "Gestures in Android",
+   "summary": "Introducing 16 new gestures in Android to help users quickly use apps and controls without looking at the screen."
+  },
+  {
+   "date": 1340841600,
+   "tracks": [
+    "Google Wallet"
+   ],
+   "title": "In-App Payments: new pricing and subscription options for integrating Google Wallet",
+   "summary": "Announcing a new, industry-leading pricing model and introducing the recurring subscriptions feature."
+  },
+  {
+   "date": 1340838000,
+   "tracks": [
+    "YouTube"
+   ],
+   "title": "New YouTube Mobile Android App",
+   "link": "http://youtube-global.blogspot.com/2012/06/take-your-channels-with-you-on-new.html",
+   "summary": "Bringing your channel guide to YouTube Mobile on Android, and making playback faster on the go."
+  },
+  {
+   "date": 1340837100,
+   "tracks": [
+    "AppsScript"
+   ],
+   "title": "Apps Script updates",
+   "summary": "Updates include a new standalone editor for creating, editing and publishing scripts; the ability to create and store scripts in Google Drive; and the ability to distribute scripts as web apps in the Chrome Web Store. "
+  },
+  {
+   "date": 1340837100,
+   "tracks": [
+    "App Engine"
+   ],
+   "title": "Google App Engine offers EU datastores",
+   "link": "http://googleappengine.blogspot.com/2012/06/google-app-engine-170-released-at.html",
+   "summary": "EU datastores are now available for Premier Google App Engine customers."
+  },
+  {
+   "date": 1340833500,
+   "tracks": [
+    "YouTube"
+   ],
+   "title": "New and updated YouTube APIs",
+   "link": "http://apiblog.youtube.com/2012/06/build-awesome-youtube-experiences-with.html",
+   "summary": "New APIs for YouTube Analytics, updated data, API and more."
+  },
+  {
+   "date": 1340832600,
+   "tracks": [
+    "Geo APIs"
+   ],
+   "title": "Public transit data included in Google Maps API",
+   "link": "http://googlegeodevelopers.blogspot.com/2012/06/public-transit-routing-and-layer-now.html",
+   "summary": "Google Maps API now enables developers to add transit data, including public transit directions, to their maps and apps."
+  },
+  {
+   "date": 1340830800,
+   "tracks": [
+    "Geo"
+   ],
+   "title": "Launch of new 3D imagery on Google Earth for Android",
+   "link": "http://google-latlong.blogspot.com/2012/06/take-flight-through-new-3d-cities-on.html",
+   "summary": "New 3D imagery - complete with 3D  buildings, terrain and landscaping - will be available for select metropolitan areas on Google Earth for Android."
+  },
+  {
+   "date": 1340827200,
+   "tracks": [
+    "Google+"
+   ],
+   "title": "New Hangout App Metrics",
+   "link": "http://googleplusplatform.blogspot.com/2012/06/apps-are-plus-in-hangouts.html",
+   "summary": "In the 90 days since we launched apps in hangouts, we’ve seen:\nover 200 hangout apps, average duration of a hangout increase by 2.5x when participants use an app, 1 in 3 hangouts use an app, partners like Cacoo doubling their user base after launch."
+  },
+  {
+   "date": 1340827200,
+   "tracks": [
+    "Google+"
+   ],
+   "title": "New Hangout Apps",
+   "link": "http://googleplusplatform.blogspot.com/2012/06/apps-are-plus-in-hangouts.html",
+   "summary": "Introducing a new set of featured apps for Google+ Hangouts."
+  },
+  {
+   "date": 1340825400,
+   "tracks": [
+    "Google+"
+   ],
+   "title": "You're invited to the first Google+ Event",
+   "link": "https://play.google.com/store/apps/details?id=com.google.android.apps.plus",
+   "summary": "Google I/O After Hours is tonight and you're on the guest list! To get into full Party Mode, just download the latest Google+ app and RSVP to the event. We'll see you tonight!"
+  },
+  {
+   "date": 1340823600,
+   "tracks": [
+    "Geo"
+   ],
+   "title": "Offline Maps for Android",
+   "link": "http://google-latlong.blogspot.com/2012/06/go-offline-with-google-maps-for-android.html",
+   "summary": "Offline Maps for Android enables users to access Google Maps without a data connection. Great for traveling!"
+  },
+  {
+   "date": 1340822400,
+   "title": "Don't miss new sessions just added to today's schedule.",
+   "link": "https://developers.google.com/events/io/sessions",
+   "summary": "Check signs at Moscone, the I/O mobile app, or website for the latest updates from Android, Chrome, Cloud Platform, Commerce, Google Drive and Google+."
+  },
+  {
+   "date": 1340821800,
+   "tracks": [
+    "Drive"
+   ],
+   "title": "Introducing Version 2 of the Google Drive SDK",
+   "link": "http://googledevelopers.blogspot.com/2012/06/announcing-version-2-of-google-drive.html",
+   "summary": "Updated APIs and other tools to make it easier for developers to build apps that integrate seamlessly with Drive on the web and mobile devices."
+  },
+  {
+   "date": 1340820600,
+   "tracks": [
+    "Google+"
+   ],
+   "title": "Google+ Events",
+   "link": "http://googleblog.blogspot.com/2012/06/1.html",
+   "summary": "Introducing Google+ Events, a new way to create, capture, and share public and private events -- before, during, and after they take place."
+  },
+  {
+   "date": 1340820480,
+   "tracks": [
+    "jaynancarrow"
+   ],
+   "title": "Sergey Brin and friends demo Project Glass - from the air!",
+   "summary": "Jumping out of a Zeppelin, wearing Google Glass units, live in a Hangout IN Air! "
+  },
+  {
+   "date": 1340819880,
+   "tracks": [
+    "Google+"
+   ],
+   "title": "Android and iOS Google+ tablet apps",
+   "link": "http://googleblog.blogspot.com/2012/06/1.html",
+   "summary": "Announcing the first Google+ apps designed with Android and iOS tablets in mind."
+  },
+  {
+   "date": 1340819160,
+   "tracks": [
+    "Android"
+   ],
+   "title": "Nexus 7: just $199",
+   "summary": "Order Nexus 7 directly from Google Play, with orders shipping in mid-July."
+  },
+  {
+   "date": 1340819160,
+   "tracks": [
+    "Android"
+   ],
+   "title": "Nexus Q",
+   "summary": "The best way to enjoy Google Play at home."
+  },
+  {
+   "date": 1340819160,
+   "tracks": [
+    "Android"
+   ],
+   "title": "Nexus Q: just $299",
+   "summary": "Purchase it direct, straight from Google Play, with orders shipping mid-July."
+  },
+  {
+   "date": 1340819100,
+   "tracks": [
+    "Android"
+   ],
+   "title": "The Playground is open",
+   "link": "http://officialandroid.blogspot.com/2012/06/android-io-playground-is-open.html",
+   "summary": "A new update to Android, the first tablet from Google, and the first ever social-streaming device."
+  },
+  {
+   "date": 1340817660,
+   "tracks": [
+    "Android"
+   ],
+   "title": "Nexus 7: The first tablet from Google",
+   "summary": "Super powerful, super portable."
+  },
+  {
+   "date": 1340817360,
+   "tracks": [
+    "Android"
+   ],
+   "title": "More of the entertainment you love, on Google Play",
+   "summary": "Now offering magazines, TV shows, and movies for sale."
+  },
+  {
+   "date": 1340817000,
+   "tracks": [
+    "Android"
+   ],
+   "title": "Google Play is growing exponentially",
+   "summary": "20 billion apps have been downloaded, and that number is growing by more than one billion every month."
+  },
+  {
+   "date": 1340816100,
+   "tracks": [
+    "Android"
+   ],
+   "title": "Introducing Google Now",
+   "summary": "Bringing you just the right information, before you even ask."
+  }
+ ],
+ "etag": "\"28TE4p54IH2kfQsspQTVDnhlmZk/W6k8nbDP-T9StSHXQg5D9u2ieE8\""
+}

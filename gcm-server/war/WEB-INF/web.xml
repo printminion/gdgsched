@@ -1,4 +1,4 @@
-<!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
   Copyright 2012 Google Inc.
 
   Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,8 +12,7 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
-  -->
-<web-app id="IoschedGCMServer" version="2.5">
+  --><web-app id="GDGDevFestSchedGCMServer" version="2.5">
 
     <!-- context initializer -->
 
@@ -115,4 +114,16 @@
             <transport-guarantee>CONFIDENTIAL</transport-guarantee>
         </user-data-constraint>
     </security-constraint>
+ <servlet>
+  <servlet-name>SystemServiceServlet</servlet-name>
+  <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+  <init-param>
+   <param-name>services</param-name>
+   <param-value/>
+  </init-param>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>SystemServiceServlet</servlet-name>
+  <url-pattern>/_ah/spi/*</url-pattern>
+ </servlet-mapping>
 </web-app>

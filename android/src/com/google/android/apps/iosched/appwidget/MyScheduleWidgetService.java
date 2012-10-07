@@ -116,7 +116,6 @@ public class MyScheduleWidgetService extends RemoteViewsService {
                 rv = new RemoteViews(mContext.getPackageName(),
                         R.layout.list_item_schedule_block_widget);
                 final String type = mCursor.getString(BlocksQuery.BLOCK_TYPE);
-
                 final String blockId = mCursor.getString(BlocksQuery.BLOCK_ID);
                 final String blockTitle = mCursor.getString(BlocksQuery.BLOCK_TITLE);
                 final String blockType = mCursor.getString(BlocksQuery.BLOCK_TYPE);

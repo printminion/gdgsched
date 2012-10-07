@@ -20,7 +20,9 @@ import gdg.devfest.Setup;
 import gdg.devfest.app.BuildConfig;
 import gdg.devfest.app.R;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Formatter;
 import java.util.Locale;
 import java.util.TimeZone;
@@ -51,6 +53,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.apps.iosched.io.model.Day;
 import com.google.android.apps.iosched.provider.ScheduleContract.Blocks;
 import com.google.android.apps.iosched.provider.ScheduleContract.Rooms;
 
@@ -62,7 +65,7 @@ public class UIUtils {
      * Time zone to use when formatting all session times. To always use the
      * phone local time, use {@link TimeZone#getDefault()}.
      */
-    public static final TimeZone CONFERENCE_TIME_ZONE = Setup.CONFERENCE_TIME_ZONE;
+    //public static final TimeZone CONFERENCE_TIME_ZONE = Setup.CONFERENCE_TIME_ZONE;
 
     public static final long CONFERENCE_START_MILLIS = Setup.CONFERENCE_START_MILLIS;
     public static final long CONFERENCE_END_MILLIS = Setup.CONFERENCE_END_MILLIS;
@@ -118,12 +121,34 @@ public class UIUtils {
                 formatBlockTimeString(blockStart, blockEnd, context), roomName);
     }
 
+    public static TimeZone getConferenceTimeZone(){
+    	return Setup.CONFERENCE_TIME_ZONE;
+    }
+    
+    /**
+     * Return current GMT in form "+02:00"
+     * 
+     * @return
+     */
+    public static String getConferenceDST(){
+        TimeZone.setDefault(getConferenceTimeZone());
+        
+    	SimpleDateFormat dateFormat = new SimpleDateFormat("Z");
+    	Date date = new Date();
+ 
+    	
+    	//LogUtils.LOGE("getConferenceDST", dateFormat.format(date).substring(0, 3) + ":" + dateFormat.format(date).substring(dateFormat.format(date).length() - 2));
+    	
+    	
+    	return dateFormat.format(date).substring(0, 3) + ":" + dateFormat.format(date).substring(dateFormat.format(date).length() - 2);
+    }
+
     /**
      * Format and return the given {@link Blocks} values using
      * {@link #CONFERENCE_TIME_ZONE}.
      */
     public static String formatBlockTimeString(long blockStart, long blockEnd, Context context) {
-        TimeZone.setDefault(CONFERENCE_TIME_ZONE);
+        TimeZone.setDefault(getConferenceTimeZone());
 
         // NOTE: There is an efficient version of formatDateRange in Eclair and
         // beyond that allows you to recycle a StringBuilder.
@@ -131,7 +156,7 @@ public class UIUtils {
     }
 
     public static boolean isSameDay(long time1, long time2) {
-        TimeZone.setDefault(CONFERENCE_TIME_ZONE);
+        TimeZone.setDefault(getConferenceTimeZone());
 
         Calendar cal1 = Calendar.getInstance();
         Calendar cal2 = Calendar.getInstance();
@@ -356,7 +381,7 @@ public class UIUtils {
             Setup.SessionDetailActivityClass,
             Setup.SessionsActivityClass,
             Setup.TrackDetailActivityClass,
-            Setup.VendorDetailActivityClass,
+            Setup.VendorDetailActivityClass            
     };
 
     // TODO: use <meta-data> element instead

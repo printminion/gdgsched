@@ -135,16 +135,16 @@ public class SyncHelper {
                 // Load static local data
                 batch.addAll(new RoomsHandler(mContext).parse(
                         JSONHandler.loadResourceJson(mContext, R.raw.rooms)));
-//                batch.addAll(new BlocksHandler(mContext).parse(
-//                        JSONHandler.loadResourceJson(mContext, R.raw.common_slots)));
+                batch.addAll(new BlocksHandler(mContext).parse(
+                        JSONHandler.loadResourceJson(mContext, R.raw.common_slots)));
                 batch.addAll(new TracksHandler(mContext).parse(
                         JSONHandler.loadResourceJson(mContext, R.raw.tracks)));
-//                batch.addAll(new SpeakersHandler(mContext, true).parse(
-//                        JSONHandler.loadResourceJson(mContext, R.raw.speakers)));
-//                batch.addAll(new SessionsHandler(mContext, true, false).parse(
-//                        JSONHandler.loadResourceJson(mContext, R.raw.sessions)));
-//                batch.addAll(new SandboxHandler(mContext, true).parse(
-//                        JSONHandler.loadResourceJson(mContext, R.raw.sandbox)));
+                batch.addAll(new SpeakersHandler(mContext, true).parse(
+                        JSONHandler.loadResourceJson(mContext, R.raw.speakers)));
+                batch.addAll(new SessionsHandler(mContext, true, false).parse(
+                        JSONHandler.loadResourceJson(mContext, R.raw.sessions)));
+                batch.addAll(new SandboxHandler(mContext, true).parse(
+                        JSONHandler.loadResourceJson(mContext, R.raw.sandbox)));
                 batch.addAll(new SearchSuggestHandler(mContext).parse(
                         JSONHandler.loadResourceJson(mContext, R.raw.search_suggest)));
                 prefs.edit().putInt("local_data_version", LOCAL_VERSION_CURRENT).commit();

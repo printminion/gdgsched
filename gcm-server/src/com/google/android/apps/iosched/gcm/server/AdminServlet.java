@@ -33,7 +33,7 @@ public class AdminServlet extends BaseServlet {
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
         out.print("<html><body>");
-        out.print("<head><title>IOSched GCM Server</title>");
+        out.print("<head><title>GDD DevFest GCM Server</title>");
         out.print("</head>");
         String status = (String) req.getAttribute("status");
         if (status != null) {

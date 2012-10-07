@@ -18,23 +18,34 @@ package com.google.android.apps.iosched;
 
 public class Config {
     // OAuth 2.0 related config
-    public static final String APP_NAME = "Your-App-Name";
-    public static final String API_KEY = "API_KEY"; // from the APIs console
-    public static final String CLIENT_ID = "0000000000000.apps.googleusercontent.com"; // from the APIs console
+
+	/*
+	 * Google+ configuration
+	 */
+	public static final String APP_NAME = "GDGDevFest-Android-App";
+    public static final String API_KEY = "PUT_YOUR_VALUE_HERE"; // from the APIs console
+    public static final String CLIENT_ID = "PUT_YOUR_VALUE_HERE"; // from the APIs console
 
     // Conference API-specific config
     // NOTE: the backend used for the Google I/O 2012 Android app is not currently open source, so
     // you should modify these fields to reflect your own backend.
-    private static final String CONFERENCE_API_KEY = "API_KEY";
-    private static final String ROOT_EVENT_ID = "googleio2012";
-    private static final String BASE_URL = "https://google-developers.appspot.com/_ah/api/resources/v0.1";
+    private static final String CONFERENCE_API_KEY = "PUT_YOUR_VALUE_HERE";
+    private static final String ROOT_EVENT_ID = "gdgdevfest2012";
+    
+    private static final String BASE_URL = "PUT_YOUR_VALUE_HERE"; //API URL 
+    
+     
     public static final String GET_ALL_SESSIONS_URL      = BASE_URL + "/sessions?parent_event=" + ROOT_EVENT_ID + "&api_key=" + CONFERENCE_API_KEY;
     public static final String GET_ALL_SPEAKERS_URL      = BASE_URL + "/speakers?event_id=" + ROOT_EVENT_ID + "&api_key=" + CONFERENCE_API_KEY;
     public static final String GET_ALL_ANNOUNCEMENTS_URL = BASE_URL + "/announcements?parent_event=" + ROOT_EVENT_ID + "&api_key=" + CONFERENCE_API_KEY;
     public static final String EDIT_MY_SCHEDULE_URL      = BASE_URL + "/editmyschedule/o/";
 
+    
+    public static final String BASE_SESSION_URL      =  BASE_URL + "/events/io/sessions/";
+    
     // Static file host for the sandbox data
-    public static final String GET_SANDBOX_URL = "https://developers.google.com/events/io/sandbox-data";
+    public static final String GET_SANDBOX_URL = BASE_URL + "/events/io/sandbox-data?parent_event=" + ROOT_EVENT_ID + "&api_key=" + CONFERENCE_API_KEY;
+    
 
     // YouTube API config
     public static final String YOUTUBE_API_KEY = "API_KEY";
@@ -48,6 +59,16 @@ public class Config {
     public static final String SECONDARY_LIVESTREAM_TRACK = "chrome";
 
     // GCM config
-    public static final String GCM_SERVER_URL = "https://yourapp-gcm.appspot.com";
-    public static final String GCM_SENDER_ID = "0000000000000"; // project ID from the APIs console
+    public static final String GCM_SERVER_URL = "PUT_YOUR_VALUE_HERE";
+    public static final String GCM_SENDER_ID = "PUT_YOUR_VALUE_HERE"; // project ID from the APIs console
+
+
+	public static final String AUTH_TOKEN_SCOPE = "PUT_YOUR_VALUE_HERE";
+	public static final String AUTH_TOKEN_SCOPE_READONLY = "PUT_YOUR_VALUE_HERE";
+	
+	public static final boolean FEATURE_MAP_ENABLED = false;
+	public static final boolean FEATURE_SESSION_URL_ENABLED = false;
+	public static final boolean FEATURE_PLUSONE_ENABLED = false;
+	
+
 }

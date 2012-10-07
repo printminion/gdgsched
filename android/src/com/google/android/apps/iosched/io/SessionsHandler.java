@@ -17,6 +17,8 @@
 package com.google.android.apps.iosched.io;
 
 import gdg.devfest.app.R;
+
+import com.google.android.apps.iosched.Config;
 import com.google.android.apps.iosched.io.model.Event;
 import com.google.android.apps.iosched.io.model.SessionsResponse;
 import com.google.android.apps.iosched.io.model.SessionsResult;
@@ -25,6 +27,7 @@ import com.google.android.apps.iosched.provider.ScheduleContract.Sessions;
 import com.google.android.apps.iosched.provider.ScheduleContract.SyncColumns;
 import com.google.android.apps.iosched.util.Lists;
 import com.google.android.apps.iosched.util.ParserUtils;
+import com.google.android.apps.iosched.util.UIUtils;
 import com.google.gson.Gson;
 
 import android.content.ContentProviderOperation;
@@ -56,8 +59,7 @@ public class SessionsHandler extends JSONHandler {
 
     private static final String TAG = makeLogTag(SessionsHandler.class);
 
-    private static final String BASE_SESSION_URL
-            = "https://developers.google.com/events/io/sessions/";
+    private static final String BASE_SESSION_URL = Config.BASE_SESSION_URL;
 
     private static final String EVENT_TYPE_KEYNOTE = "keynote";
     private static final String EVENT_TYPE_CODELAB = "codelab";
@@ -327,7 +329,9 @@ public class SessionsHandler extends JSONHandler {
         if (index == 1) {
             time = "0" + time;
         }
-        final String composed = String.format("%sT%s:00.000-07:00", date, time);
+        //final String composed = String.format("%sT%s:00.000-07:00", date, time);
+        final String composed = String.format("%sT%s:00.000" + UIUtils.getConferenceDST(), date, time);
+        
         //return sTimeFormat.parse(composed).getTime();
         sTime.parse3339(composed);
         return sTime.toMillis(false);

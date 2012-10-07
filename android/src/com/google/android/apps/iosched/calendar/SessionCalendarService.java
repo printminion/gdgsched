@@ -286,7 +286,8 @@ public class SessionCalendarService extends IntentService {
                 values.put(CalendarContract.Events.TITLE, calendarEventTitle);
                 values.put(CalendarContract.Events.CALENDAR_ID, calendarId);
                 values.put(CalendarContract.Events.EVENT_TIMEZONE,
-                        UIUtils.CONFERENCE_TIME_ZONE.getID());
+                        UIUtils.getConferenceTimeZone().getID());
+                
                 Uri eventUri = resolver.insert(CalendarContract.Events.CONTENT_URI, values);
                 String eventId = eventUri.getLastPathSegment();
                 if (eventId == null) {

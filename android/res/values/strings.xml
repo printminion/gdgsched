@@ -79,9 +79,9 @@
     <string name="session_link_youtube">YouTube video</string>
     <string name="session_link_pdf">Slides (PDF)</string>
     <string name="session_link_notes">Official notes</string>
-    <string name="session_link_livestream">Watch on I/O Live</string>
+    <string name="session_link_livestream">Watch on DevFest Live</string>
 
-    <string name="session_livestream_title">I/O Live</string>
+    <string name="session_livestream_title">DevFest Live</string>
     <string name="session_livestream_track_title">%s Track</string>
     <string name="session_livestream_info">Info</string>
     <string name="session_livestream_captions">Captions</string>
@@ -97,7 +97,7 @@
     <string name="search_hint">Search sessions</string>
 
     <string name="share_template">Checking out \'<xliff:g id="title">%1$s</xliff:g>\' at <xliff:g id="hashtags">%2$s</xliff:g> <xliff:g id="url">%3$s</xliff:g></string>
-    <string name="share_livestream_template">Watching I/O Live: \'<xliff:g id="title">%1$s</xliff:g>\' at <xliff:g id="hashtags">%2$s</xliff:g> <xliff:g id="url">%3$s</xliff:g></string>
+    <string name="share_livestream_template">Watching DevFest Live: \'<xliff:g id="title">%1$s</xliff:g>\' at <xliff:g id="hashtags">%2$s</xliff:g> <xliff:g id="url">%3$s</xliff:g></string>
 
     <!-- Announcements -->
     <string name="whats_on_countdown_title_0"><xliff:g id="remaining_time">%1$s</xliff:g>\nuntil GDG DevFest</string>
@@ -217,8 +217,8 @@
 
     <!-- Google TV  -->
     <string name="missed_io_title">No GDG DevFest sessions are currently playing.</string>
-    <string name="missed_io_subtitle">Check out https://developers.google.com/io for the latest on GDG DevFest.</string>
-    <string name="error_tv_no_url">No I/O Live stream was available for the selected session.</string>
+    <string name="missed_io_subtitle">Check out http://www.devfest.info for the latest on GDG DevFest.</string>
+    <string name="error_tv_no_url">No DevFest Live stream was available for the selected session.</string>
     <string name="next_live_stream_session_template">Next Live Session: <xliff:g id="title">%1$s</xliff:g></string>
     <string name="starts_in_template_0_days">Starts in <xliff:g id="remaining_time">%1$s</xliff:g>.</string>
     <plurals name="starts_in_template">

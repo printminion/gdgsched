@@ -23,7 +23,7 @@ import android.os.Build;
  * This is the service that provides the factory to be bound to the collection
  * service.
  */
-@TargetApi(Build.VERSION_CODES.HONEYCOMB)
+//@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class MyScheduleWidgetService extends
 		com.google.android.apps.iosched.appwidget.MyScheduleWidgetService {
 }

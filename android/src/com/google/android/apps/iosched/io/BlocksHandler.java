@@ -23,6 +23,7 @@ import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.provider.ScheduleContract.Blocks;
 import com.google.android.apps.iosched.util.Lists;
 import com.google.android.apps.iosched.util.ParserUtils;
+import com.google.android.apps.iosched.util.UIUtils;
 import com.google.gson.Gson;
 
 import android.content.ContentProviderOperation;
@@ -32,6 +33,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import static com.google.android.apps.iosched.util.LogUtils.LOGE;
+import static com.google.android.apps.iosched.util.LogUtils.LOGD;
 import static com.google.android.apps.iosched.util.LogUtils.LOGV;
 import static com.google.android.apps.iosched.util.LogUtils.makeLogTag;
 
@@ -69,7 +71,7 @@ public class BlocksHandler extends JSONHandler {
             ArrayList<ContentProviderOperation> batch) {
         ContentProviderOperation.Builder builder = ContentProviderOperation
                 .newInsert(ScheduleContract.addCallerIsSyncAdapterParameter(Blocks.CONTENT_URI));
-        //LOGD(TAG, "Inside parseSlot:" + date + ",  " + slot);
+        LOGD(TAG, "Inside parseSlot:" + date + ",  " + slot);
         String start = slot.start;
         String end = slot.end;
 
@@ -81,8 +83,15 @@ public class BlocksHandler extends JSONHandler {
         if (slot.title != null) {
             title = slot.title;
         }
-        String startTime = date + "T" + start + ":00.000-07:00";
-        String endTime = date + "T" + end + ":00.000-07:00";
+//        String startTime = date + "T" + start + ":00.000-07:00";
+//        String endTime = date + "T" + end + ":00.000-07:00";
+        
+        String startTime = date + "T" + start + ":00.000" + UIUtils.getConferenceDST();
+        String endTime = date + "T" + end + ":00.000" + UIUtils.getConferenceDST();
+        
+        
+        
+        
         LOGV(TAG, "startTime:" + startTime);
         long startTimeL = ParserUtils.parseTime(startTime);
         long endTimeL = ParserUtils.parseTime(endTime);

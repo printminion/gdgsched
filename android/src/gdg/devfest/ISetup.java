@@ -36,4 +36,5 @@ public interface ISetup {
 	public static final Class<?> MapMultiPaneActivityClass = gdg.devfest.app.ui.tablet.MapMultiPaneActivity.class;
 	public static final Class<?> SessionsVendorsMultiPaneActivityClass = gdg.devfest.app.ui.tablet.SessionsVendorsMultiPaneActivity.class;
 
+	
 }

@@ -16,7 +16,10 @@
 
 package com.google.android.apps.iosched.ui;
 
+import gdg.devfest.Setup;
 import gdg.devfest.app.R;
+
+import com.google.android.apps.iosched.Config;
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.ui.tablet.SessionsVendorsMultiPaneActivity;
 import com.google.android.apps.iosched.ui.widget.SimpleSectionedListAdapter;
@@ -236,7 +239,12 @@ public class MyScheduleFragment extends SherlockListFragment implements
             case R.id.menu_share:
                 // On ICS+ devices, we normally won't reach this as ShareActionProvider will handle
                 // sharing.
-                helper.shareSession(getActivity(), R.string.share_template, title, hashtags, url);
+                if (Config.FEATURE_SESSION_URL_ENABLED) {
+                	helper.shareSession(getActivity(), R.string.share_template, title, hashtags, url);
+                } else {
+                	helper.shareSession(getActivity(), R.string.share_template, title, hashtags, "");
+                }
+            	
                 handled = true;
                 break;
             case R.id.menu_social_stream:

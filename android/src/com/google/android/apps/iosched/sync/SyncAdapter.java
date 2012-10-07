@@ -107,7 +107,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
 
         } catch (IOException e) {
             ++syncResult.stats.numIoExceptions;
-            LOGE(TAG, "Error syncing data for I/O 2012.", e);
+            LOGE(TAG, "Error syncing data for GDG DevFest 2012.", e);
         }
     }
 }

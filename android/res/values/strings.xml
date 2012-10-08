@@ -14,7 +14,7 @@
   limitations under the License.
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">GDG DevFest 2012</string>
+    <string name="app_name">GDG DevFest Berlin</string>
 
     <string name="description_search">Search</string>
     <string name="description_map">Map</string>
@@ -57,8 +57,8 @@
     <string name="all_tracks">All tracks</string>
     <string name="all_tracks_sessions">All sessions</string>
     <string name="all_tracks_vendors">All companies</string>
-    <string name="all_tracks_subtitle_sessions">All sessions at GDG DevFest 2012.</string>
-    <string name="all_tracks_subtitle_vendors">All developer sandbox companies at GDG DevFest 2012.</string>
+    <string name="all_tracks_subtitle_sessions">All sessions at GDG DevFest 2012 Berlin.</string>
+    <string name="all_tracks_subtitle_vendors">All developer sandbox companies at GDG DevFest 2012 Berlin.</string>
 
     <string name="empty_sessions">No sessions found.</string>
     <string name="empty_session_detail">No session details found.</string>
@@ -87,7 +87,7 @@
     <string name="session_livestream_captions">Captions</string>
     <string name="session_livestream_error">Sorry, there was an error loading the live stream, please try again later</string>
     <string name="session_livestream_keynote_title">GDG DevFest - %s</string>
-    <string name="session_livestream_keynote_desc">GDG DevFest\'s much-anticipated daily kickoff events will make you among the first developers to see what we\'ve been working on here at Google. Grab some popcorn, kick back and enjoy the show directly from your Android powered device.</string>
+    <string name="session_livestream_keynote_desc"> Grab some popcorn, kick back and enjoy the show directly from your Android powered device.</string>
 
     <string name="codelab_title_template">Code Lab: <xliff:g id="title">%1$s</xliff:g></string>
 
@@ -131,8 +131,8 @@
 
     <!-- EULA, login, and about -->
     <string name="description_choose_account"><![CDATA[
-        Welcome to the GDG DevFest 2012 app, your official companion to the GDG DevFest conference
-        taking place in San Francisco from June 27th to June 29th, 2012.<br>
+        Welcome to the GDG DevFest 2012 Berlin app, your official companion to the GDG DevFest conference
+        taking place in Berlin from October 13th to October 14th, 2012.<br>
         <br>
         <font color="#4683ec"><b>Sign in with the Google account you registered with to
         get started</b></font>.
@@ -188,8 +188,8 @@
     </plurals>
     <string name="snooze_x_min">Snooze <xliff:g id="remaining_time">%1$d</xliff:g> min.</string>
 
-    <string name="session_calendar_suffix">- added by GDG DevFest 2012 Android app</string>
-    <string name="toast_deleting_sessions_from_calendar">Removing your GDG DevFest 2012 sessions from Google Calendar&#8230;</string>
+    <string name="session_calendar_suffix">- added by GDG DevFest 2012 Berlin Android app</string>
+    <string name="toast_deleting_sessions_from_calendar">Removing your GDG DevFest 2012 Berlin sessions from Google Calendar&#8230;</string>
 
     <!-- Contextual help text -->
     <string name="help_add_to_schedule"><![CDATA[
@@ -243,7 +243,7 @@
     <string name="just_beamed">You just used Android Beam!</string>
     <string name="view_beam_session">Learn more</string>
     <string name="title_beam">Beam Easter Egg Unlocked!</string>
-    <string name="beam_unlocked_default">Awesome, you just used Android Beam!\n\nTry using Android Beam when viewing session details, to share sessions with others at the conference.\n\nTo learn more about using Android Beam in your own application, touch <i>Learn more</i> below or visit the NFC and Android Beam session on Thursday at 4pm in Room 9.\n\nA <i>Show Android Beam easter egg</i> item has also been added to the action bar at the top of the app\'s home screen. <b>Show this screen to us at end of the session to receive an Android Beam pin collectible!</b></string>
-    <string name="beam_unlocked_session">Awesome, you just used Android Beam to share a session!\n\nTo learn more about using Android Beam in your own application, touch <i>Learn more</i> below or visit the NFC and Android Beam session on Thursday at 4pm in Room 9.\n\nA <i>Show Android Beam easter egg</i> item has also been added to the action bar at the top of the app\'s home screen. <b>Show this screen to us at end of the session to receive an Android Beam pin collectible!</b></string>
-    <string name="beam_unlocked_help">This shows you have used Android Beam with the GDG DevFest 2012 app.\n\nTo learn more about using Android Beam in your own application, touch <i>Learn more</i> below or visit the NFC and Android Beam session on Thursday at 4pm in Room 9.\n\nA <i>Show Android Beam easter egg</i> item has also been added to the action bar at the top of the app\'s home screen. <b>Show this screen to us at end of the session to receive an Android Beam pin collectible!</b></string>
+    <string name="beam_unlocked_default">Awesome, you just used Android Beam!\n\nTry using Android Beam when viewing session details, to share sessions with others at the conference.\n\nA <i>Show Android Beam easter egg</i> item has also been added to the action bar at the top of the app\'s home screen.</string>
+    <string name="beam_unlocked_session">Awesome, you just used Android Beam to share a session!\n\nTo learn more about using Android Beam in your own application, touch <i>Learn more</i> below.\n\nA <i>Show Android Beam easter egg</i> item has also been added to the action bar at the top of the app\'s home screen.</string>
+    <string name="beam_unlocked_help">This shows you have used Android Beam with the GDG DevFest 2012 app.\n\nTo learn more about using Android Beam in your own application, touch <i>Learn more</i> below.\n\nA <i>Show Android Beam easter egg</i> item has also been added to the action bar at the top of the app\'s home screen.</string>
 </resources>

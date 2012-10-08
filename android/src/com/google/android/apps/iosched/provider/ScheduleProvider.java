@@ -51,6 +51,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static com.google.android.apps.iosched.util.LogUtils.LOGV;
+import static com.google.android.apps.iosched.util.LogUtils.LOGE;
 import static com.google.android.apps.iosched.util.LogUtils.makeLogTag;
 
 /**
@@ -245,6 +246,8 @@ public class ScheduleProvider extends ContentProvider {
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs,
             String sortOrder) {
         LOGV(TAG, "query(uri=" + uri + ", proj=" + Arrays.toString(projection) + ")");
+//        LOGE(TAG, "query(uri=" + uri + ", proj=" + Arrays.toString(projection) + ")");
+        
         final SQLiteDatabase db = mOpenHelper.getReadableDatabase();
 
         final int match = sUriMatcher.match(uri);
@@ -280,6 +283,8 @@ public class ScheduleProvider extends ContentProvider {
     @Override
     public Uri insert(Uri uri, ContentValues values) {
         LOGV(TAG, "insert(uri=" + uri + ", values=" + values.toString() + ")");
+//        LOGE(TAG, "insert(uri=" + uri + ", values=" + values.toString() + ")");
+        
         final SQLiteDatabase db = mOpenHelper.getWritableDatabase();
         final int match = sUriMatcher.match(uri);
         boolean syncToNetwork = !ScheduleContract.hasCallerIsSyncAdapterParameter(uri);
@@ -345,6 +350,8 @@ public class ScheduleProvider extends ContentProvider {
     @Override
     public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
         LOGV(TAG, "update(uri=" + uri + ", values=" + values.toString() + ")");
+//        LOGE(TAG, "update(uri=" + uri + ", values=" + values.toString() + ")");
+        
         final SQLiteDatabase db = mOpenHelper.getWritableDatabase();
         final SelectionBuilder builder = buildSimpleSelection(uri);
         int retVal = builder.where(selection, selectionArgs).update(db, values);

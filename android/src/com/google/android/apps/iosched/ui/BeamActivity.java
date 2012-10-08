@@ -50,14 +50,14 @@ public class BeamActivity extends BaseActivity {
                 .setTitle(R.string.just_beamed)
                 .setMessage(R.string.beam_unlocked_default)
                 .setNegativeButton(R.string.close, null)
-                .setPositiveButton(R.string.view_beam_session,
+                /* .setPositiveButton(R.string.view_beam_session,
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface di, int i) {
                                 BeamUtils.launchBeamSession(BeamActivity.this);
                                 di.dismiss();
                             }
-                        })
+                        }) */
                 .create()
                 .show();
     }
@@ -67,14 +67,14 @@ public class BeamActivity extends BaseActivity {
                 .setTitle(R.string.title_beam)
                 .setMessage(R.string.beam_unlocked_help)
                 .setNegativeButton(R.string.close, null)
-                .setPositiveButton(R.string.view_beam_session,
+                /*.setPositiveButton(R.string.view_beam_session,
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface di, int i) {
                                 BeamUtils.launchBeamSession(BeamActivity.this);
                                 di.dismiss();
                             }
-                        })
+                        })*/
                 .create()
                 .show();
     }

@@ -58,11 +58,14 @@ public class BlocksHandler extends JSONHandler {
                 String date = day.date;
                 TimeSlot[] timeSlots = day.slot;
                 for (TimeSlot timeSlot : timeSlots) {
+                	LOGE(TAG, "parseSlot:date:" + date + ", timeSlot:" + timeSlot);
                     parseSlot(date, timeSlot, batch);
                 }
             }
         } catch (Throwable e) {
+        	
             LOGE(TAG, e.toString());
+        	
         }
         return batch;
     }

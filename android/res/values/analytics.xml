@@ -15,12 +15,10 @@
   -->
 <resources>
     <!-- TODO: insert your analytics parameters here -->
-    <!--
-    <string name="ga_trackingId">your-tracking-id-here</string>
+    <string name="ga_trackingId">UA-35397535-1</string>
     <bool name="ga_debug">false</bool>
     <bool name="ga_reportUncaughtExceptions">true</bool>
     <integer name="ga_sessionTimeout">120</integer>
     <integer name="ga_dispatchInterval">120</integer>
     <string name="ga_appversion">1.0</string>
-    -->
 </resources>

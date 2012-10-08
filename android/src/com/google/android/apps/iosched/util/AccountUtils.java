@@ -154,7 +154,7 @@ public class AccountUtils {
                     Toast.LENGTH_LONG).show();
             context.startService(
                     new Intent(SessionCalendarService.ACTION_CLEAR_ALL_SESSIONS_CALENDAR)
-                            .setClass(context, Setup.SessionCalendarServiceClass)
+                            .setClass(context, Setup.getSessionCalendarServiceClass())
                             .putExtra(SessionCalendarService.EXTRA_ACCOUNT_NAME,
                                     getChosenAccountName(context)));
         }

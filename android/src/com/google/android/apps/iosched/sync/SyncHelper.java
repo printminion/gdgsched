@@ -242,7 +242,7 @@ public class SyncHelper {
 
     private void syncCalendar() {
         Intent intent = new Intent(SessionCalendarService.ACTION_UPDATE_ALL_SESSIONS_CALENDAR);
-        intent.setClass(mContext, Setup.SessionCalendarServiceClass);
+        intent.setClass(mContext, Setup.getSessionCalendarServiceClass());
         mContext.startService(intent);
     }
 

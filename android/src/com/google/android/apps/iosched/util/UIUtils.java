@@ -386,8 +386,8 @@ public class UIUtils {
 
     // TODO: use <meta-data> element instead
     private static final Class[] sTabletActivities = new Class[]{
-    		Setup.MapMultiPaneActivityClass,
-    		Setup.SessionsVendorsMultiPaneActivityClass,
+    		Setup.getMapMultiPaneActivityClass(),
+    		Setup.getSessionsVendorsMultiPaneActivityClass(),
     };
 
     public static void enableDisableActivities(final Context context) {
@@ -415,7 +415,7 @@ public class UIUtils {
 
     public static Class getMapActivityClass(Context context) {
         if (UIUtils.isHoneycombTablet(context)) {
-            return Setup.MapMultiPaneActivityClass;
+            return Setup.getMapMultiPaneActivityClass();
         }
 
         return Setup.MapActivityClass;

@@ -1,5 +1,8 @@
 package gdg.devfest;
 
+import android.annotation.TargetApi;
+import android.os.Build;
+
 
 public interface ISetup {
 
@@ -13,17 +16,14 @@ public interface ISetup {
 
 	public static final Class<?> AccountActivityClass = gdg.devfest.app.ui.AccountActivity.class;
 
-	public static final Class<?> MyScheduleWidgetServiceClass = gdg.devfest.app.appwidget.MyScheduleWidgetService.class;
-	public static final Class<?> MyScheduleWidgetProviderClass = gdg.devfest.app.appwidget.MyScheduleWidgetProvider.class;
-
-	public static final Class<?> SessionLivestreamActivityClass = gdg.devfest.app.ui.SessionLivestreamActivity.class;
+//	public static final Class<?> SessionLivestreamActivityClass = gdg.devfest.app.ui.SessionLivestreamActivity.class;
 	public static final Class<?> SessionAlarmServiceClass = gdg.devfest.app.calendar.SessionAlarmService.class;
-	public static final Class<?> SessionCalendarServiceClass = gdg.devfest.app.calendar.SessionCalendarService.class;
+//	public static final Class<?> SessionCalendarServiceClass = gdg.devfest.app.calendar.SessionCalendarService.class;
 
 	public static final Class<?> ScheduleUpdaterServiceClass = gdg.devfest.app.sync.ScheduleUpdaterService.class;
 	public static final Class<?> SocialStreamActivityClass = gdg.devfest.app.ui.SocialStreamActivity.class;
 
-	public static final Class<?> GoogleTVSessionLivestreamActivityClass = gdg.devfest.app.ui.gtv.GoogleTVSessionLivestreamActivity.class;
+//	public static final Class<?> GoogleTVSessionLivestreamActivityClass = gdg.devfest.app.ui.gtv.GoogleTVSessionLivestreamActivity.class;
 
 	public static final Class<?> BeamActivityClass = gdg.devfest.app.ui.BeamActivity.class;
 
@@ -33,8 +33,8 @@ public interface ISetup {
 	public static final Class<?> TrackDetailActivityClass = gdg.devfest.app.ui.phone.TrackDetailActivity.class;
 	public static final Class<?> VendorDetailActivityClass = gdg.devfest.app.ui.phone.VendorDetailActivity.class;
 
-	public static final Class<?> MapMultiPaneActivityClass = gdg.devfest.app.ui.tablet.MapMultiPaneActivity.class;
-	public static final Class<?> SessionsVendorsMultiPaneActivityClass = gdg.devfest.app.ui.tablet.SessionsVendorsMultiPaneActivity.class;
+//	public static final Class<?> MapMultiPaneActivityClass = gdg.devfest.app.ui.tablet.MapMultiPaneActivity.class;
+//	public static final Class<?> SessionsVendorsMultiPaneActivityClass = gdg.devfest.app.ui.tablet.SessionsVendorsMultiPaneActivity.class;
 
 	
 }

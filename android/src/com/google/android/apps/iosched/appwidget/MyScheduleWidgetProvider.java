@@ -16,16 +16,10 @@
 
 package com.google.android.apps.iosched.appwidget;
 
+import static com.google.android.apps.iosched.util.LogUtils.LOGV;
+import static com.google.android.apps.iosched.util.LogUtils.makeLogTag;
 import gdg.devfest.Setup;
 import gdg.devfest.app.R;
-import com.google.android.apps.iosched.provider.ScheduleContract;
-import com.google.android.apps.iosched.ui.HomeActivity;
-import com.google.android.apps.iosched.ui.SessionLivestreamActivity;
-import com.google.android.apps.iosched.util.AccountUtils;
-import com.google.android.apps.iosched.util.ParserUtils;
-import com.google.android.apps.iosched.util.UIUtils;
-import com.google.api.client.googleapis.extensions.android2.auth.GoogleAccountManager;
-
 import android.accounts.Account;
 import android.annotation.TargetApi;
 import android.app.PendingIntent;
@@ -43,8 +37,11 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.widget.RemoteViews;
 
-import static com.google.android.apps.iosched.util.LogUtils.LOGV;
-import static com.google.android.apps.iosched.util.LogUtils.makeLogTag;
+import com.google.android.apps.iosched.provider.ScheduleContract;
+import com.google.android.apps.iosched.util.AccountUtils;
+import com.google.android.apps.iosched.util.ParserUtils;
+import com.google.android.apps.iosched.util.UIUtils;
+import com.google.api.client.googleapis.extensions.android2.auth.GoogleAccountManager;
 
 /**
  * The app widget's AppWidgetProvider.
@@ -84,7 +81,7 @@ public class MyScheduleWidgetProvider extends AppWidgetProvider {
         final ContentResolver r = context.getContentResolver();
         if (sDataObserver == null) {
             final AppWidgetManager mgr = AppWidgetManager.getInstance(context);
-            final ComponentName cn = new ComponentName(context, Setup.MyScheduleWidgetProviderClass);
+            final ComponentName cn = new ComponentName(context, Setup.getMyScheduleWidgetProviderClass());
             sDataObserver = new SessionDataProviderObserver(mgr, cn, sWorkerQueue);
             r.registerContentObserver(ScheduleContract.Sessions.CONTENT_URI, true, sDataObserver);
         }
@@ -113,7 +110,7 @@ public class MyScheduleWidgetProvider extends AppWidgetProvider {
                     // Update widget
                     final AppWidgetManager mgr = AppWidgetManager.getInstance(context);
                     final ComponentName cn = new ComponentName(context,
-                            Setup.MyScheduleWidgetProviderClass);
+                            Setup.getMyScheduleWidgetProviderClass());
                     mgr.notifyAppWidgetViewDataChanged(mgr.getAppWidgetIds(cn),
                             R.id.widget_schedule_list);
                 }
@@ -176,7 +173,7 @@ public class MyScheduleWidgetProvider extends AppWidgetProvider {
                 Uri sessionUri = ScheduleContract.Sessions.buildSessionUri(starredSessionId);
                 LOGV(TAG, "sessionUri:" + sessionUri);
                 Intent intent = new Intent(Intent.ACTION_VIEW, sessionUri);
-                intent.setClass(context, Setup.SessionLivestreamActivityClass);
+                intent.setClass(context, Setup.getSessionLivestreamActivityClass());
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
@@ -190,7 +187,7 @@ public class MyScheduleWidgetProvider extends AppWidgetProvider {
         for (int appWidgetId : appWidgetIds) {
             // Specify the service to provide data for the collection widget.  Note that we need to
             // embed the appWidgetId via the data otherwise it will be ignored.
-            final Intent intent = new Intent(context, Setup.MyScheduleWidgetServiceClass);
+            final Intent intent = new Intent(context, Setup.getMyScheduleWidgetServiceClass());
             intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
             intent.setData(Uri.parse(intent.toUri(Intent.URI_INTENT_SCHEME)));
             final RemoteViews rv = new RemoteViews(context.getPackageName(),
@@ -205,7 +202,7 @@ public class MyScheduleWidgetProvider extends AppWidgetProvider {
                     ? R.string.empty_widget_text
                     : R.string.empty_widget_text_signed_out));
 
-            final Intent onClickIntent = new Intent(context, Setup.MyScheduleWidgetProviderClass);
+            final Intent onClickIntent = new Intent(context, Setup.getMyScheduleWidgetProviderClass());
             onClickIntent.setAction(MyScheduleWidgetProvider.CLICK_ACTION);
             onClickIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
             onClickIntent.setData(Uri.parse(onClickIntent.toUri(Intent.URI_INTENT_SCHEME)));
@@ -213,7 +210,7 @@ public class MyScheduleWidgetProvider extends AppWidgetProvider {
                     onClickIntent, PendingIntent.FLAG_UPDATE_CURRENT);
             rv.setPendingIntentTemplate(R.id.widget_schedule_list, onClickPendingIntent);
 
-            final Intent refreshIntent = new Intent(context, Setup.MyScheduleWidgetProviderClass);
+            final Intent refreshIntent = new Intent(context, Setup.getMyScheduleWidgetProviderClass());
             refreshIntent.setAction(MyScheduleWidgetProvider.REFRESH_ACTION);
             refreshIntent.putExtra(MyScheduleWidgetProvider.EXTRA_PERFORM_SYNC, true);
             final PendingIntent refreshPendingIntent = PendingIntent.getBroadcast(context, 0,

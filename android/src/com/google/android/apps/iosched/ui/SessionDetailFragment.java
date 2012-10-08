@@ -202,7 +202,7 @@ public class SessionDetailFragment extends SherlockFragment implements
                             mSessionBlockEnd);
                     intent.putExtra(SessionCalendarService.EXTRA_SESSION_TITLE, mTitleString);
                 }
-                intent.setClass(getActivity(), Setup.SessionCalendarServiceClass);
+                intent.setClass(getActivity(), Setup.getSessionCalendarServiceClass());
                 getActivity().startService(intent);
             }
 

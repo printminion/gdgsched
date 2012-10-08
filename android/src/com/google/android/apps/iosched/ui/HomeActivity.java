@@ -95,7 +95,7 @@ public class HomeActivity extends BaseActivity implements
         // We're on Google TV; immediately short-circuit the normal behavior and show the
         // Google TV-specific landing page.
         if (UIUtils.isGoogleTV(this)) {
-            Intent intent = new Intent(HomeActivity.this, Setup.GoogleTVSessionLivestreamActivityClass);
+            Intent intent = new Intent(HomeActivity.this, Setup.getGoogleTVSessionLivestreamActivityClass());
             startActivity(intent);
             finish();
         }

@@ -123,7 +123,7 @@ public final class SessionsHelper {
 
         // Because change listener is set to null during initialization, these
         // won't fire on pageview.
-        final Intent refreshIntent = new Intent(mActivity, Setup.MyScheduleWidgetProviderClass);
+        final Intent refreshIntent = new Intent(mActivity, Setup.getMyScheduleWidgetProviderClass());
         refreshIntent.setAction(MyScheduleWidgetProvider.REFRESH_ACTION);
         mActivity.sendBroadcast(refreshIntent);
 

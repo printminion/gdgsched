@@ -2,6 +2,7 @@ import os
 import webapp2
 import jinja2
 import logging
+from google.appengine.api import users
 
 APP_ID = ''
 template_dir = os.path.join(os.path.dirname(__file__), 'templates/' + APP_ID)
@@ -47,14 +48,14 @@ class ApiHandlerSpeakers(Handler):
 #Host: 192.168.178.42:8082
 #User-Agent: gdg.devfest.app/0.19 (19) (gzip)
                 
-                
+        self.response.headers["Content-Type"] = "application/json"
         self.render("speakers.json")
 
     def post(self, params):
         logging.info('post:%s' % params)
         logging.info('header:%s' % self.request)
         
-                
+        self.response.headers["Content-Type"] = "application/json"
         self.render("speakers.json")
 
 class ApiHandlerSessions(Handler):
@@ -69,14 +70,20 @@ class ApiHandlerSessions(Handler):
 #Connection: Keep-Alive
 #Host: 192.168.178.42:8082
 #User-Agent: gdg.devfest.app/0.19 (19) (gzip)
-                
+        user = users.get_current_user()
+        if user:
+            logging.info('Hello, ' + user.nickname())
+        else:
+            logging.info('Hello: anonymous')
+            
+        self.response.headers["Content-Type"] = "application/json"
         self.render("sessions.json")
 
     def post(self, params):
         logging.info('post:%s' % params)
         logging.info('header:%s' % self.request)
         
-                
+        self.response.headers["Content-Type"] = "application/json"
         self.render("sessions.json")
         
 class ApiHandlerMySchedule(Handler):
@@ -87,7 +94,7 @@ class ApiHandlerMySchedule(Handler):
         logging.info('get:%s' % params)
         logging.info('header:%s' % self.request)
         
-                
+        self.response.headers["Content-Type"] = "application/json"
         self.render("myschedule.json")
 
     def post(self, params):
@@ -107,7 +114,7 @@ class ApiHandlerMySchedule(Handler):
 #{"sessionid":"gooio2012/315/"}
 
         
-                
+        self.response.headers["Content-Type"] = "application/json"
         self.render("myschedule.json")
 
 class ApiHandlerAnnouncements(Handler):
@@ -118,14 +125,14 @@ class ApiHandlerAnnouncements(Handler):
         logging.info('get:%s' % params)
         logging.info('header:%s' % self.request)
         
-                
+        self.response.headers["Content-Type"] = "application/json"
         self.render("announcements.json")
 
     def post(self, params):
         logging.info('post:%s' % params)
         logging.info('header:%s' % self.request)
         
-                
+        self.response.headers["Content-Type"] = "application/json"
         self.render("announcements.json")
 
 class ApiHandlerSandboxData(Handler):
@@ -136,14 +143,14 @@ class ApiHandlerSandboxData(Handler):
         logging.info('get:%s' % params)
         logging.info('header:%s' % self.request)
         
-                
+        self.response.headers["Content-Type"] = "application/json"
         self.render("sandbox-data.json")
 
     def post(self, params):
         logging.info('post:%s' % params)
         logging.info('header:%s' % self.request)
         
-                
+        self.response.headers["Content-Type"] = "application/json"
         self.render("sandbox-data.json")
 
 #    private static final String BASE_URL = "https://google-developers.appspot.com/_ah/api/resources/v0.1";

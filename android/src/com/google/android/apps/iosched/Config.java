@@ -20,27 +20,23 @@ public class Config {
     // OAuth 2.0 related config
 	/*
 	 * Google+ configuration
-	 */
-//    public static final String APP_NAME = "Google-IO-Android-App";
-//    public static final String API_KEY = "AIzaSyCXjH2cfTuClN0OTbJpF1XnHbhdPQ6wg4Y"; // from the APIs console
-//    public static final String CLIENT_ID = "237695054204.apps.googleusercontent.com"; // from the APIs console
+         @TODO: Generate your Google+ API KEY
+	https://developers.google.com/+/api/oauth under "Acquiring and using an API key"	
 
-    
-    public static final String APP_NAME = "GDGDevFest-Android-App";
-    public static final String API_KEY = "AIzaSyCsAij0bSMlGHdta3snhfxD4rAOw9WeSDg"; // from the APIs console
-    public static final String CLIENT_ID = "903246180582.apps.googleusercontent.com"; // from the APIs console
+	*/    
+	
+    public static final String APP_NAME = "PUT_YOUR_VALUE_HERE";
+    public static final String API_KEY = "PUT_YOUR_VALUE_HERE"; // from the APIs console
+    public static final String CLIENT_ID = "PUT_YOUR_VALUE_HERE"; // from the APIs console
 
     // Conference API-specific config
     // NOTE: the backend used for the Google I/O 2012 Android app is not currently open source, so
     // you should modify these fields to reflect your own backend.
     private static final String CONFERENCE_API_KEY = "AIzaSyA2MhtOhocnrkFvc_uyavMbrLj_Qi36Vak";
-//    private static final String ROOT_EVENT_ID = "googleio2012";
     private static final String ROOT_EVENT_ID = "gdgdevfest2012";
     
 //    private static final String BASE_URL = "https://google-developers.appspot.com/_ah/api/resources/v0.1";
-    //private static final String BASE_URL = "https://kupriyanov7/_ah/api/resources/v0.1";
 //    private static final String BASE_URL = "http://192.168.178.34:8082/api";
-//    private static final String BASE_URL = "http://192.168.178.42:8082";
 //    private static final String BASE_URL = "http://www.devfest.info/json";
     private static final String BASE_URL = "http://2012.mkupriyanov.appspot.com/api";
      
@@ -49,12 +45,9 @@ public class Config {
     public static final String GET_ALL_ANNOUNCEMENTS_URL = BASE_URL + "/announcements?parent_event=" + ROOT_EVENT_ID + "&api_key=" + CONFERENCE_API_KEY;
     public static final String EDIT_MY_SCHEDULE_URL      = BASE_URL + "/editmyschedule/o/";
 
-    
-    //public static final String BASE_SESSION_URL      =  "https://developers.google.com/events/io/sessions/";
     public static final String BASE_SESSION_URL      =  BASE_URL + "/events/io/sessions/";
     
     // Static file host for the sandbox data
-    //public static final String GET_SANDBOX_URL = "https://developers.google.com/events/io/sandbox-data";
     public static final String GET_SANDBOX_URL = BASE_URL + "/events/io/sandbox-data?parent_event=" + ROOT_EVENT_ID + "&api_key=" + CONFERENCE_API_KEY;
     
 
@@ -69,12 +62,10 @@ public class Config {
     public static final String PRIMARY_LIVESTREAM_TRACK = "android";
     public static final String SECONDARY_LIVESTREAM_TRACK = "chrome";
 
-    // GCM config
-//    public static final String GCM_SERVER_URL = "https://iosched-gcm.appspot.com";
-//    public static final String GCM_SENDER_ID = "1009579170083"; // project ID from the APIs console
-    
-    public static final String GCM_SERVER_URL = "http://2012.mkupriyanov.appspot.com";
-    public static final String GCM_SENDER_ID = "903246180582"; // project ID from the APIs console
+    // @TODO: 2CM config
+    // http://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&answer=2663268
+    public static final String GCM_SERVER_URL = "PUT_YOUR_VALUE_HERE";
+    public static final String GCM_SENDER_ID = "PUT_YOUR_VALUE_HERE"; // project ID from the APIs console
 
 
 //	public static final String AUTH_TOKEN_SCOPE = "https://www.googleapis.com/auth/developerssite";
@@ -87,7 +78,10 @@ public class Config {
 	public static final boolean FEATURE_SESSION_URL_ENABLED = false;
 	public static final boolean FEATURE_PLUSONE_ENABLED = false;
 	
-	public static final String GOOGLE_ANALYTICS = "UA-35397535-1";
+	/*
+	@TODO: defune your Google Analytics tracking code
+ 	*/
+	public static final String GOOGLE_ANALYTICS = "PUT_YOUR_VALUE_HERE";
 	
 	
 	

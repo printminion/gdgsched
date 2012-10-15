@@ -13,6 +13,8 @@ public class Setup implements ISetup {
 
 	public static TimeZone CONFERENCE_TIME_ZONE = TimeZone.getTimeZone("Europe/Berlin");
 	
+	//set proper GMT! e.g. Berlin +02:00
+	//you can find it here http://www.timeanddate.com/worldclock/city.html?n=37 under "Current time zone offset"
 	public static long CONFERENCE_START_MILLIS = ParserUtils.parseTime("2012-10-13T09:00:00.000+02:00");
 	public static long CONFERENCE_END_MILLIS = ParserUtils.parseTime("2012-10-14T19:00:00.000+02:00");
 
@@ -31,8 +33,6 @@ public class Setup implements ISetup {
 		return gdg.devfest.app.calendar.SessionCalendarService.class;
 	}
 	
-	
-
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	public static final Class<?> getGoogleTVSessionLivestreamActivityClass() {
 		return gdg.devfest.app.ui.gtv.GoogleTVSessionLivestreamActivity.class;

@@ -18,3 +18,6 @@ With the app you can:
 * Automatically sync sessions in your schedule to your Android 4.0 device's calendar
 * Beam session details from your Android 4.0, NFC-enabled device to another using Android Beam
 
+
+Wiki: https://github.com/russenreaktor/gdgsched/wiki
+

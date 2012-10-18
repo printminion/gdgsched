@@ -16,7 +16,7 @@
 
 package com.google.android.apps.iosched.util;
 
-import gdg.devfest.app.BuildConfig;
+import gdg.devfest.ch.BuildConfig;
 
 import android.annotation.TargetApi;
 import android.app.Activity;

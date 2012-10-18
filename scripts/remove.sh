@@ -1,2 +1,2 @@
 #!/bin/sh
-adb uninstall gdg.devfest.app
+adb uninstall gdg.devfest.ch

@@ -1,32 +1,75 @@
+# Most of the commens here are taken from:
+# https://developers.google.com/appengine/docs/python/config/appconfig
+
+# Replace 'your-app-id-goes-here' with your application ID.
+# Get it here if you don't have one: https://appengine.google.com/
 application: mkupriyanov
-version: 2012
+# App version
+version: 20121019
+
+# Use Python 2.7 runtime here.
+# See this for more info: 
+# http://code.google.com/appengine/docs/python/python27/using27.html
 runtime: python27
 api_version: 1
-threadsafe: false
 
-libraries:                                                                      
-- name: jinja2                                                                  
-  version: latest 
+# Use concurrent requests
+threadsafe: true
 
+
+# Defaul expiration time. If omitted, the production server sets the expiration
+# to 10 minutes.
 default_expiration: "30d"
 
-skip_files:
-- ^(.*/)?app\.yaml
-- ^(.*/)?app\.yml
-- ^(.*/)?index\.yaml
-- ^(.*/)?index\.yml
-- ^(.*/)?#.*#
-- ^(.*/)?.*~
-- ^(.*/)?.*\.py[co]
-- ^(.*/)?.*/RCS/.*
-- ^(.*/)?\..*
-- ^(.*/)?tests$
+# The Python 2.7 runtime includes some additional third-party modules 
+# and makes them available on demand.
+# http://code.google.com/appengine/docs/python/tools/libraries27.html
+#
+# See 'Configuring Libraries' section on
+# http://code.google.com/appengine/docs/python/python27/using27.html
+#
+# When adding jinja2 to your library configuration, you may want to 
+# add markupsafe and setuptools as well. markupsafe improves the performance
+# of template rendering in jinja2 and setuptools is required for some template
+# loading functionality.
+libraries:
+- name: webapp2
+  version: "2.5.1"
+- name: markupsafe
+  version: "0.15"
+- name: setuptools
+  version: "0.6c11"
+- name: jinja2
+#  version: "2.6"
+  version: latest 
+- name: lxml
+  version: '2.3'
 
+# The Python SDK includes a number of builtin handlers 
+# for common application functions.
+builtins:
+# See this page for more info:
+# http://code.google.com/appengine/docs/python/tools/appstats.html
+# - appstats: on
+
+# Usage article:
+# http://code.google.com/appengine/articles/deferred.html
+# - deferred: on
+
+# More info on Setting Up Remote API:
+# http://code.google.com/appengine/docs/python/tools/uploadingdata.html
+# - remote_api: on
+
+# A list of URL patterns and descriptions of how they should be handled. 
+# Reserved URLs (you can't use them): 
+#   /_ah/
+#   /form
 handlers:
-- url: /favicon\.ico
+# static content handlers  
+- url: /(favicon\.ico)
   mime_type: image/png
-  static_files: static/favicon.ico
-  upload: static/favicon.ico
+  static_files: static/\1
+  upload: static/favicon\.ico
 
 - url: /(robots\.txt|humans\.txt|crossdomain\.xml)
   static_files: static/\1
@@ -85,8 +128,8 @@ handlers:
 - url: /default/.*
   script: default.app
   
-- url: /.*
-  script: index.app
+#- url: /.*
+#  script: index.app
  
 #- url: /.*
 #  script: fontvending.app
@@ -97,3 +140,30 @@ handlers:
 
  #- url: /.*
  # script: not_found.py
+
+# dynamic handlers
+- url: /.*
+  script: main.app
+  secure: always
+
+# The skip_files element specifies which files in the application directory 
+# are not to be uploaded to App Engine. The value is either a regular 
+# expression, or a list of regular expressions. Any filename that matches 
+# any of the regular expression is omitted from the list of files to upload 
+# when the application is uploaded.
+skip_files:
+- ^(.*/)?app\.yaml
+- ^(.*/)?app\.yml
+- ^(.*/)?index\.yaml
+- ^(.*/)?index\.yml
+- ^(.*/)?#.*#
+- ^(.*/)?.*~
+- ^(.*/)?.*sh
+- ^(.*/)?.*\.py[co]
+- ^(.*/)?.*/RCS/.*
+- ^(.*/)?\..*
+- ^(.*/)?.*\.bak$
+- ^(.*/)?.*\.template$
+- tmp
+- tests
+- ^(.*/)?tests$

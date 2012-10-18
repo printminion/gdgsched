@@ -6,7 +6,7 @@ cd %~dp0
 
 %~d0
 
-HOST=192.168.178.37
+HOST=localhost
  
 wget -O../android/res/raw/rooms.json --no-check-certificate http://$HOST:8082/default/rooms
 

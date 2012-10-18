@@ -16,7 +16,8 @@
 
 package com.google.android.apps.iosched.ui;
 
-import gdg.devfest.app.R;
+import gdg.devfest.ch.R;
+
 import com.google.android.apps.iosched.provider.ScheduleContract.Announcements;
 import com.google.android.apps.iosched.util.UIUtils;
 

@@ -1,9 +1,35 @@
 import os
+import sys
 import webapp2
 import jinja2
 import logging
 from google.appengine.api import users
+from secrets import SESSION_KEY
+#from handlers import BaseRequestHandler
+from google.appengine.api import oauth
 
+# Note, unlike in the Android app below, there's no 'oauth2:' prefix here
+SCOPE = 'https://www.googleapis.com/auth/userinfo.email'
+
+
+# webapp2 config
+app_config = {
+  'webapp2_extras.sessions': {
+    'cookie_name': '_simpleauth_sess',
+    'secret_key': SESSION_KEY
+  },
+  'webapp2_extras.auth': {
+    'user_attributes': []
+  }
+}
+
+# inject './lib' dir in the path so that we can simply do "import ndb" 
+# or whatever there's in the app lib dir.
+if 'lib' not in sys.path:
+    sys.path[0:0] = ['lib']
+    
+    
+    
 APP_ID = ''
 template_dir = os.path.join(os.path.dirname(__file__), 'templates/' + APP_ID)
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir)
@@ -36,9 +62,6 @@ class MainPage(Handler):
         self.render_front()
         
 class ApiHandlerSpeakers(Handler):
-    def render_front(self):
-        self.render("index.html")
-    
     def get(self, params):
         logging.info('get:%s' % params)
         logging.info('header:%s' % self.request)
@@ -58,10 +81,10 @@ class ApiHandlerSpeakers(Handler):
         self.response.headers["Content-Type"] = "application/json"
         self.render("speakers.json")
 
+
+
 class ApiHandlerSessions(Handler):
-    def render_front(self):
-        self.render("index.html")
-    
+#class ApiHandlerSessions(BaseRequestHandler):
     def get(self, params):
         logging.info('get:%s' % params)
         logging.info('header:%s' % self.request)
@@ -76,6 +99,23 @@ class ApiHandlerSessions(Handler):
         else:
             logging.info('Hello: anonymous')
             
+        """Handles GET /profile"""    
+#        if self.logged_in:
+#            logging.info('Hello, simpleauth: %s' % self.current_user)
+#        else:
+#            logging.info('Hello: simpleauth:anonymous')
+            
+        # magic happens here
+#        SCOPE = 'https://www.googleapis.com/auth/userinfo.email'
+#        SCOPE = 'https://www.googleapis.com/auth/userinfo.profile'
+#        user = oauth.get_current_user(SCOPE)
+#        if user:
+#            logging.info('oauth: %s' % user.email())
+#        else:
+#            logging.info('oauth: anonymous')
+#        
+
+            
         self.response.headers["Content-Type"] = "application/json"
         self.render("sessions.json")
 
@@ -87,9 +127,6 @@ class ApiHandlerSessions(Handler):
         self.render("sessions.json")
         
 class ApiHandlerMySchedule(Handler):
-    def render_front(self):
-        self.render("index.html")
-    
     def get(self, params):
         logging.info('get:%s' % params)
         logging.info('header:%s' % self.request)
@@ -118,9 +155,6 @@ class ApiHandlerMySchedule(Handler):
         self.render("myschedule.json")
 
 class ApiHandlerAnnouncements(Handler):
-    def render_front(self):
-        self.render("index.html")
-    
     def get(self, params):
         logging.info('get:%s' % params)
         logging.info('header:%s' % self.request)
@@ -136,9 +170,6 @@ class ApiHandlerAnnouncements(Handler):
         self.render("announcements.json")
 
 class ApiHandlerSandboxData(Handler):
-    def render_front(self):
-        self.render("index.html")
-    
     def get(self, params):
         logging.info('get:%s' % params)
         logging.info('header:%s' % self.request)
@@ -165,6 +196,6 @@ app = webapp2.WSGIApplication([('/api/sandbox-data(.*)', ApiHandlerSandboxData)
                                , ('/api/speakers(.*)', ApiHandlerSpeakers)
                                , ('/api/announcements(.*)', ApiHandlerAnnouncements)
                                , ('/api/editmyschedule/o/(.*)', ApiHandlerMySchedule)
-                               ], debug=True)
+                               ], config=app_config, debug=True)
 
 

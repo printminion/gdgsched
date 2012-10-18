@@ -18,8 +18,8 @@ package com.google.android.apps.iosched.appwidget;
 
 import static com.google.android.apps.iosched.util.LogUtils.LOGV;
 import static com.google.android.apps.iosched.util.LogUtils.makeLogTag;
-import gdg.devfest.Setup;
-import gdg.devfest.app.R;
+import gdg.devfest.ch.Setup;
+import gdg.devfest.ch.R;
 import android.accounts.Account;
 import android.annotation.TargetApi;
 import android.app.PendingIntent;

@@ -16,7 +16,7 @@
 
 package com.google.android.apps.iosched.util;
 
-import gdg.devfest.app.R;
+import gdg.devfest.ch.R;
 
 import android.app.AlertDialog;
 import android.app.Dialog;

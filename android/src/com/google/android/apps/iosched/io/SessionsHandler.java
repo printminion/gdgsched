@@ -16,7 +16,7 @@
 
 package com.google.android.apps.iosched.io;
 
-import gdg.devfest.app.R;
+import gdg.devfest.ch.R;
 
 import com.google.android.apps.iosched.Config;
 import com.google.android.apps.iosched.io.model.Event;

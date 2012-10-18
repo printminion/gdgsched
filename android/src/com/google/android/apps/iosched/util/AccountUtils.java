@@ -16,8 +16,9 @@
 
 package com.google.android.apps.iosched.util;
 
-import gdg.devfest.Setup;
-import gdg.devfest.app.R;
+import gdg.devfest.ch.Setup;
+import gdg.devfest.ch.R;
+
 import com.google.android.apps.iosched.calendar.SessionCalendarService;
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.ui.AccountActivity;

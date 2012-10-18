@@ -16,7 +16,8 @@
 
 package com.google.android.apps.iosched.appwidget;
 
-import gdg.devfest.app.R;
+import gdg.devfest.ch.R;
+
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.ui.widget.SimpleSectionedListAdapter;
 import com.google.android.apps.iosched.ui.widget.SimpleSectionedListAdapter.Section;

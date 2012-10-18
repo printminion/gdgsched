@@ -16,7 +16,7 @@
 
 package com.google.android.apps.iosched.sync;
 
-import gdg.devfest.app.BuildConfig;
+import gdg.devfest.ch.BuildConfig;
 import com.google.android.apps.iosched.util.AccountUtils;
 
 import android.accounts.Account;

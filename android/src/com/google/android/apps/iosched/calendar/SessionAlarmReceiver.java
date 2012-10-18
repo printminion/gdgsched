@@ -16,7 +16,7 @@
 
 package com.google.android.apps.iosched.calendar;
 
-import gdg.devfest.Setup;
+import gdg.devfest.ch.Setup;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;

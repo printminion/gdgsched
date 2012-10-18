@@ -14,11 +14,13 @@
   limitations under the License.
   -->
 <resources>
-    <!-- TODO: insert your analytics parameters here -->
-    <string name="ga_trackingId">UA-35397535-1</string>
-    <bool name="ga_debug">false</bool>
-    <bool name="ga_reportUncaughtExceptions">true</bool>
-    <integer name="ga_sessionTimeout">120</integer>
-    <integer name="ga_dispatchInterval">120</integer>
-    <string name="ga_appversion">1.0</string>
+
+    
+    <!-- TODO: Replace placeholder GA API key with a real one. -->
+    <string name="ga_api_key">UA-35397535-1</string>
+    <bool name="ga_debug">true</bool>
+    <bool name="ga_dryRun">true</bool>
+    <bool name="ga_auto_activity_tracking">true</bool>
+  
+
 </resources>

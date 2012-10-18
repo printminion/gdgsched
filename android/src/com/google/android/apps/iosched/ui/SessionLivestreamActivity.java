@@ -19,8 +19,9 @@ package com.google.android.apps.iosched.ui;
 import com.google.analytics.tracking.android.EasyTracker;
 import com.google.android.apps.iosched.Config;
 
-import gdg.devfest.Setup;
-import gdg.devfest.app.R;
+import gdg.devfest.ch.Setup;
+import gdg.devfest.ch.R;
+
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.provider.ScheduleContract.Sessions;
 import com.google.android.apps.iosched.provider.ScheduleContract.Tracks;

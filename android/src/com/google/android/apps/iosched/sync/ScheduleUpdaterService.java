@@ -27,7 +27,7 @@ import android.os.Looper;
 import android.os.Message;
 import android.widget.Toast;
 
-import gdg.devfest.Setup;
+import gdg.devfest.ch.Setup;
 
 import java.io.IOException;
 import java.util.ArrayList;

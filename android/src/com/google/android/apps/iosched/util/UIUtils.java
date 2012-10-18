@@ -16,9 +16,9 @@
 
 package com.google.android.apps.iosched.util;
 
-import gdg.devfest.Setup;
-import gdg.devfest.app.BuildConfig;
-import gdg.devfest.app.R;
+import gdg.devfest.ch.BuildConfig;
+import gdg.devfest.ch.Setup;
+import gdg.devfest.ch.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

@@ -16,10 +16,12 @@
 
 package com.google.android.apps.iosched.gcm;
 
-import gdg.devfest.Setup;
-import gdg.devfest.app.BuildConfig;
+import gdg.devfest.ch.BuildConfig;
 import com.google.android.apps.iosched.Config;
-import gdg.devfest.app.R;
+
+import gdg.devfest.ch.Setup;
+import gdg.devfest.ch.R;
+
 import com.google.android.apps.iosched.sync.TriggerSyncReceiver;
 import com.google.android.apps.iosched.ui.HomeActivity;
 import com.google.android.apps.iosched.util.UIUtils;

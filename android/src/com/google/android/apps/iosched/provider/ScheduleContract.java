@@ -26,7 +26,7 @@ import android.provider.ContactsContract;
 import android.text.TextUtils;
 import android.text.format.DateUtils;
 
-import gdg.devfest.Setup;
+import gdg.devfest.ch.Setup;
 
 import java.util.List;
 

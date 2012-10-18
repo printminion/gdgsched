@@ -16,7 +16,7 @@
 
 package com.google.android.apps.iosched.ui;
 
-import gdg.devfest.app.R;
+import gdg.devfest.ch.R;
 
 import android.content.Intent;
 import android.os.Bundle;

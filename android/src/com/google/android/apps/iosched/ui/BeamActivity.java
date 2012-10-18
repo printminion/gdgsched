@@ -23,7 +23,8 @@ import android.os.Bundle;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 
-import gdg.devfest.app.R;
+import gdg.devfest.ch.R;
+
 import com.google.android.apps.iosched.util.BeamUtils;
 
 /**

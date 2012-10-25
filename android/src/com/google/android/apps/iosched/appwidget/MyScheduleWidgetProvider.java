@@ -18,8 +18,7 @@ package com.google.android.apps.iosched.appwidget;
 
 import static com.google.android.apps.iosched.util.LogUtils.LOGV;
 import static com.google.android.apps.iosched.util.LogUtils.makeLogTag;
-import gdg.devfest.ch.Setup;
-import gdg.devfest.ch.R;
+import de.gdg.devfest.ka.R;
 import android.accounts.Account;
 import android.annotation.TargetApi;
 import android.app.PendingIntent;
@@ -42,6 +41,8 @@ import com.google.android.apps.iosched.util.AccountUtils;
 import com.google.android.apps.iosched.util.ParserUtils;
 import com.google.android.apps.iosched.util.UIUtils;
 import com.google.api.client.googleapis.extensions.android2.auth.GoogleAccountManager;
+
+import de.gdg.devfest.ka.Setup;
 
 /**
  * The app widget's AppWidgetProvider.

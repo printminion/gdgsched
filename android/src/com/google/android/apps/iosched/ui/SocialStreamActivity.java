@@ -16,7 +16,7 @@
 
 package com.google.android.apps.iosched.ui;
 
-import gdg.devfest.ch.R;
+import de.gdg.devfest.ka.R;
 
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;

@@ -16,7 +16,7 @@
 
 package com.google.android.apps.iosched.util;
 
-import gdg.devfest.ch.BuildConfig;
+import de.gdg.devfest.ka.BuildConfig;
 
 import android.util.Log;
 

@@ -16,11 +16,11 @@
  <!-- 
  
  mk: renamed   xmlns:iosched="http://schemas.android.com/apk/res/com.google.android.apps.iosched"
- 	 to  xmlns:gdgsched="http://schemas.android.com/apk/res/gdg.devfest.ch"
+ 	 to  xmlns:gdgsched="http://schemas.android.com/apk/res/de.gdg.devfest.ka"
  
    -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:iosched="http://schemas.android.com/apk/res/gdg.devfest.ch"
+    xmlns:iosched="http://schemas.android.com/apk/res/de.gdg.devfest.ka"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"

@@ -28,7 +28,7 @@
         android:layout_marginBottom="@dimen/multipane_padding"
         android:background="@drawable/grey_frame">
 
-        <fragment android:name="gdg.devfest.ch.app.ui.tablet.TracksDropdownFragment"
+        <fragment android:name="de.gdg.devfest.ka.app.ui.tablet.TracksDropdownFragment"
             android:id="@+id/fragment_tracks_dropdown"
             android:layout_width="match_parent"
             android:layout_height="@dimen/thickbar_height" />

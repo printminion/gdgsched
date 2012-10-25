@@ -17,8 +17,8 @@
 package com.google.android.apps.iosched.ui;
 
 import com.google.analytics.tracking.android.EasyTracker;
-import gdg.devfest.ch.BuildConfig;
-import gdg.devfest.ch.R;
+import de.gdg.devfest.ka.BuildConfig;
+import de.gdg.devfest.ka.R;
 
 import com.google.android.apps.iosched.util.UIUtils;
 

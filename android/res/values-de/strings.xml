@@ -1,0 +1,249 @@
+<!--
+  Copyright 2012 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">DevFest Karlsruhe</string>
+
+    <string name="description_search">Suche</string>
+    <string name="description_map">Map</string>
+    <string name="description_refresh">Aktualisieren</string>
+    <string name="description_share">Teilen</string>
+    <string name="description_add_schedule">Zur Agenda hinzufügen</string>
+    <string name="description_remove_schedule">Von der Agenda entfernen</string>
+    <string name="description_social_stream">Google+-Stream</string>
+    <string name="description_compose">Neuer Beitrag</string>
+    <string name="description_add_account">Account hinzufügen</string>
+    <string name="description_about">Über</string>
+    <string name="description_sign_out">Abmelden</string>
+    <string name="description_captions">Überschriften</string>
+
+    <string name="title_sessions">Sessions</string>
+    <string name="title_session_detail">Session-Information</string>
+    <string name="title_tracks">Tracks</string>
+    <string name="title_vendors">Sandbox</string>
+    <string name="title_vendor_detail">Firmen-Information</string>
+    <string name="title_map">Map</string>
+    <string name="title_tagstream">Google+ Posts</string>
+    <string name="title_about">Über</string>
+
+    <string name="title_share">Teile mittels</string>
+
+    <string name="title_search">Suche</string>
+    <string name="title_search_query">Suche nach \"&lt;b&gt;<xliff:g id="query">%1$s</xliff:g>&lt;b&gt;\"</string>
+
+    <string name="title_my_schedule">Meine Agenda</string>
+    <string name="title_explore">Erkunden</string>
+    <string name="title_stream">Google+ Stream</string>
+
+    <plurals name="title_selected_sessions">
+        <item quantity="one">1 Vortrag ausgewählt</item>
+        <item quantity="other"><xliff:g id="num_sessions">%1$d</xliff:g> Vorträge ausgewählt</item>
+    </plurals>
+
+    <string name="session_subtitle"><xliff:g id="time">%1$s</xliff:g> in <xliff:g id="room">%2$s</xliff:g></string>
+
+    <string name="all_tracks">Alle Tracks</string>
+    <string name="all_tracks_sessions">Alle Vorträge</string>
+    <string name="all_tracks_vendors">Alle Firmen</string>
+    <string name="all_tracks_subtitle_sessions">Alle Vorträge am DevFest Karlsruhe 2012.</string>
+    <string name="all_tracks_subtitle_vendors">All Firmen am DevFest Karlsruhe 2012.</string>
+
+    <string name="empty_sessions">Kein Vortrag gefunden.</string>
+    <string name="empty_session_detail">Keine Vortrag-Details gefunden.</string>
+    <string name="empty_vendors">Keine Firma gefunden.</string>
+    <string name="empty_social_stream">Keine Posts gefunden.</string>
+    <string name="empty_waiting_for_sync">Warte auf Syncronisierung&#8230;</string>
+    <string name="empty_captions">Keine Untertitel für den Vortrag gefunden.</string>
+
+    <string name="unknown_room">(Unbekannter Raum)</string>
+    <string name="codelab_room">Code Labs (Ebene 2)</string>
+    <string name="keynote_room">Ebene 3</string>
+
+    <string name="session_links">Links</string>
+    <string name="session_requirements">Voraussetzungen</string>
+    <string name="session_speakers">Vortragende</string>
+
+    <string name="session_link_main">Web link</string>
+    <string name="session_link_youtube">YouTube video</string>
+    <string name="session_link_pdf">Folien (PDF)</string>
+    <string name="session_link_notes">Anmerkungen</string>
+    <string name="session_link_livestream">Auf DevFest Live anschauen</string>
+
+    <string name="session_livestream_title">DevFest Live</string>
+    <string name="session_livestream_track_title">%s Track</string>
+    <string name="session_livestream_info">Info</string>
+    <string name="session_livestream_captions">Untertitel</string>
+    <string name="session_livestream_error">Entschuldigung, es gab einen Fehler beim Laden des Live-Streams, bitte später wieder probieren</string>
+    <string name="session_livestream_keynote_title">DevFest Karlsruhe - %s</string>
+    <string name="session_livestream_keynote_desc">Nimm dir ein paar Popcorn, entspanne dich und betrachte sie live von deinem Android Devices.</string>
+
+    <string name="codelab_title_template">Code Lab: <xliff:g id="title">%1$s</xliff:g></string>
+
+    <string name="vendor_exhibitors_prefix">Aussteller: </string>
+
+    <string name="search_label">DevFest Karlsruhe Vorträge</string>
+    <string name="search_hint">Suche Vorträge</string>
+
+    <string name="share_template">Das klingt interessant: \'<xliff:g id="title">%1$s</xliff:g>\' auf <xliff:g id="hashtags">%2$s</xliff:g> <xliff:g id="url">%3$s</xliff:g></string>
+    <string name="share_livestream_template">DevFest Live anschauen: \'<xliff:g id="title">%1$s</xliff:g>\' at <xliff:g id="hashtags">%2$s</xliff:g> <xliff:g id="url">%3$s</xliff:g></string>
+
+    <!-- Announcements -->
+    <string name="whats_on_countdown_title_0"><xliff:g id="remaining_time">%1$s</xliff:g>\nbis DevFest Karlsruhe</string>
+    <plurals name="whats_on_countdown_title">
+        <item quantity="one"><xliff:g id="number_of_days">%1$s</xliff:g> Tag, <xliff:g id="remaining_time">%2$s</xliff:g>\nbis zum DevFest Karlsruhe</item>
+        <item quantity="other"><xliff:g id="number_of_days">%1$s</xliff:g> Tage, <xliff:g id="remaining_time">%2$s</xliff:g>\nbis zum DevFest Karlsruhe</item>
+    </plurals>
+    <string name="whats_on_thank_you_title">Bis zum nächsten Jahr!</string>
+    <string name="news_will_appear_here">Hier werden Neuigkeiten eingeblendet</string>
+    <string name="welcome_to_google_i_o">Willkommen beim DevFest Karlsruhe!</string>
+
+    <string name="permission_write">Verändere DevFest Karlsruhe Zeitplan-Daten</string>
+
+    <plurals name="toast_added_to_schedule">
+        <item quantity="one">Vortrag zu deiner Agenda hinzugefügt</item>
+        <item quantity="other"><xliff:g id="number_of_sessions">%1$s</xliff:g> Vorträge zu deiner Agenda hinzugefügt</item>
+    </plurals>
+    <plurals name="toast_removed_from_schedule">
+        <item quantity="one">Vortrag aus deiner Agenda entfernt</item>
+        <item quantity="other"><xliff:g id="number_of_sessions">%1$s</xliff:g> Vorträge aus deiner Agenda entfernt</item>
+    </plurals>
+
+    <!-- Schedule -->
+    <string name="schedule_empty_slot_title_template">Durchsuche<xliff:g id="block_type">%1$s</xliff:g>&#8230;</string>
+    <string name="schedule_empty_slot_subtitle">Kein Vortrag ausgewählt</string>
+    <string name="schedule_conflict_title"><xliff:g id="num_sessions">%1$s</xliff:g> Vorträge ausgewählt</string>
+    <string name="schedule_conflict_subtitle">Konflikt im Slot</string>
+    <string name="schedule_block_title_sessions">Vorträge</string>
+    <string name="schedule_block_title_code_labs">Code Labs</string>
+    <string name="schedule_block_title_keynote">Keynote</string>
+
+    <!-- EULA, login, and about -->
+    <string name="description_choose_account"><![CDATA[
+        Willkommen zur DevFest Karlsruhe 2012 App, dem offiziellen Begleiter zur DevFest Konferenz
+        in Karlsruhe am 3. November 2012.<br>
+        <br>
+        <font color="#4683ec"><b>Melde dich mit deinem Google-Account an</b></font>.
+    ]]></string>
+    <string name="title_accounts_list">Google-Account auswählen</string>
+    <string name="empty_accounts">Kein Google-Account vorhanden. Bitte füge einen Account hinzu um fortzufahren.</string>
+    <string name="no_connection_cant_login">Kann dich nicht anmelden, bitte überprüfe die Netzwerkverbindung.</string>
+    <string name="taking_a_while">Das kann ein bisschen dauern&#8230;</string>
+    <string name="eula_title">DevFest Karlsruhe 2012 Android App End User License Agreement</string>
+    <string name="about_eula">End User License Agreement</string>
+    <string name="about_licenses">Open Source Licenses</string>
+    <string name="about_body"><![CDATA[
+        <b>DevFest Karlsruhe 2012</b><br>
+        Version %s<br><br>
+        <!--
+        <a href="http://m.google.com/utos">Terms of Service</a><br><br>
+        <a href="http://www.google.com/policies/privacy/">Privacy Policy</a>-->
+    ]]></string>
+
+    <!--suppress AndroidLintTypographyOther -->
+    <string name="eula_text"><![CDATA[
+        By downloading, installing or using this application or any portion thereof
+        (\"Application\"), you agree to these terms and conditions.<br>
+        <br>
+        Your use of this Application is governed by: (a) the Google Terms of Service
+        (<a href="http://m.google.com/utos">m.google.com/utos</a>); (b) Google\'s Privacy Policy
+        (<a href="http://www.google.com/policies/privacy">http://www.google.com/policies/privacy</a>);
+        and (c) any applicable Google Service-specific terms of service or privacy policies.
+        Google\'s terms of service and privacy policies may be updated from time to time and without
+        notice.<br>
+        <br>
+        This Application collects certain information as you use it, including via Google Analytics.
+        Google\'s Privacy Policy explains how Google treats your information and protects your
+        privacy when you use the Application.  You agree to the use of your data in accordance
+        with Google\'s privacy policy.
+    ]]></string>
+    <string name="accept">Akzeptieren</string>
+    <string name="decline">Ablehnen</string>
+
+    <!-- Session notification -->
+    <plurals name="session_notification_ticker">
+        <item quantity="one">1 Vortrag fängt bald an.</item>
+        <item quantity="other">%d Vorträge fangen bald an.</item>
+    </plurals>
+
+    <string name="session_notification_text_1">startet in <xliff:g id="remaining_time">%1$d</xliff:g> min.</string>
+    <plurals name="session_notification_text">
+        <item quantity="one">und 1 anderer startet in <xliff:g id="remaining_time">%1$d</xliff:g> min.</item>
+        <item quantity="other">und <xliff:g id="num_sessions">%2$d</xliff:g> andere starten in <xliff:g id="remaining_time">%1$d</xliff:g> min.</item>
+    </plurals>
+    <plurals name="session_notification_title">
+        <item quantity="one">1 Vortrag startet in <xliff:g id="remaining_time">%1$d</xliff:g> min.</item>
+        <item quantity="other"><xliff:g id="num_sessions">%2$d</xliff:g> Vorträge starten in <xliff:g id="remaining_time">%1$d</xliff:g> min.</item>
+    </plurals>
+    <string name="snooze_x_min">Pausiere <xliff:g id="remaining_time">%1$d</xliff:g> min.</string>
+
+    <string name="session_calendar_suffix">- hinzugefügt durch DevFest Karlsruhe 2012 Android App</string>
+    <string name="toast_deleting_sessions_from_calendar">Entferne deinen DevFest Karlsruhe 2012 Vorträge aus dem Google Kalender&#8230;</string>
+
+    <!-- Contextual help text -->
+    <string name="help_add_to_schedule"><![CDATA[
+        Um den Vortrag zu deiner Agenda hinzuzufügen, berühre das Symbol: &nbsp;<img src="add_to_schedule" alt="Zu Agenda hinzufügen">
+    ]]></string>
+    
+    <!-- Alternate for accessibility (alt does not get used when HTML is put into dialog) -->
+    <string name="help_add_to_schedule_alt"><![CDATA[
+        Um den Vortrag zu deiner Agenda hinzuzufügen, berühre das \'Zu Agenda hinzufügen\'-Symbol.<br>
+    ]]></string>
+    
+    <!-- Others -->
+    <string name="ok">OK</string>
+    <string name="close">Schließen</string>
+    <string name="loading">Lade&#8230;</string>
+    <string name="retry">Wiederhole</string>
+    <string name="stream_error">Konnte den Google+-Stream nicht laden.</string>
+    <string name="stream_originally_shared">Ursprünglich von <xliff:g id="name">%s</xliff:g></string>
+    <string name="empty_widget_text">Keine weiteren Vorträge.\nBis zum nächsten Jahr!</string>
+    <string name="empty_widget_text_signed_out">Berühred das \'DevFest Karlsruhe 2012\'-Logo um dich anzumelden und die Anwendung zu verwenden.</string>
+
+    <string name="now_playing_badge"><![CDATA[<font color="#4683ec"><small><b>JETZT</b></small></font>]]></string>
+    <string name="live_available_badge"><![CDATA[<font color="#999999"><small><b>LIVE</b></small></font>]]></string>
+    <string name="live_now_badge"><![CDATA[<font color="#ff4444"><small><b>LIVE</b></small></font>]]></string>
+
+    <!-- Google TV  -->
+    <string name="missed_io_title">Keine DevFest Karlsruhe Vorträge laufen gerade.</string>
+    <string name="missed_io_subtitle">Gehe zu http://www.devfest.at für Details zu DevFest Karlsruhe.</string>
+    <string name="error_tv_no_url">Kein DevFest Live-Stream ist für den ausgewählten Vortrag verfügbar.</string>
+    <string name="next_live_stream_session_template">Nächste Live Session: <xliff:g id="title">%1$s</xliff:g></string>
+    <string name="starts_in_template_0_days">Startet in <xliff:g id="remaining_time">%1$s</xliff:g>.</string>
+    <plurals name="starts_in_template">
+        <item quantity="one">Startet in <xliff:g id="number_of_days">%1$s</xliff:g> Tag, <xliff:g id="remaining_time">%2$s</xliff:g>.</item>
+        <item quantity="other">Startet in <xliff:g id="number_of_days">%1$s</xliff:g> Tagen, <xliff:g id="remaining_time">%2$s</xliff:g>.</item>
+    </plurals>
+
+    <!-- Strings only used for accessibility -->
+    <string name="speaker_googleplus_profile">Google+ Profil: <xliff:g id="speakername">%1$s</xliff:g></string>
+    <string name="close_detail_pane">Details schließen</string>
+    <string name="more_sessions">Weitere Vorträge</string>
+    <string name="plus_one_description">Berühren, um dein +1 zu den vorhanden <xliff:g id="name">%1$s</xliff:g> hinzuzufügen</string>
+    <string name="plus_one_description_remove">Berühren, um dein +1 von den vorhandenen <xliff:g id="name">%1$s</xliff:g> zu entfernen</string>
+    <string name="plus_one_description_standard">Berühren für +1.</string>
+    <string name="indicator_in_schedule">Vorträge in deinem Zeitplan</string>
+    <string name="announcement_previous">Vorige Ankündigung</string>
+    <string name="announcement_next">Nächste Ankündigung</string>
+
+    <!-- Beam easter egg -->
+    <string name="description_view_beam">Zeige Android Beam Osterei</string>
+    <string name="description_beam_help">Hilfe</string>
+    <string name="just_beamed">Du hast gerade Android Beam verwendet!</string>
+    <string name="view_beam_session">Erfahre mehr</string>
+    <string name="title_beam">Beam Osterei entsperrt!</string>
+    <string name="beam_unlocked_default">Toll, du hast gerade Android Beam verwendet!\n\nVersuche es mal wenn du Vortrags-Details anschaust, um Vorträge mit anderen auf der Konferenz zu teilen.\n\n<i>Zeige Android Beam Osterei</i> wurde auch dem Action Bar des Homescreen der Anwendung hinzugefügt.</string>
+    <string name="beam_unlocked_session">Toll, du hast gerade Android Beam verwendet und damit einen Vortrag geteilt!\n\nUm mehr über Android Beam in deinen Anwendungen zu erfahren, berühre <i>Erfahre mehr</i> unten.\n\n <i>Zeige Android Beam Osterei</i> wurde auch dem Action Bar des Homescreen der Anwendung hinzugefügt.</string>
+    <string name="beam_unlocked_help">Das zeigt dass du Android Beam mit der DevFest Karlsruhe 2012 App verwendet hast.\n\nUm mehr über Android Beam in deinen Anwendungen zu erfahren, berühre <i>Erfahre mehr</i> unten.\n\n <i>Zeige Android Beam Osterei</i> wurde auch dem Action Bar des Homescreen der Anwendung hinzugefügt.</string>
+</resources>

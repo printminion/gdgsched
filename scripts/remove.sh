@@ -1,2 +1,2 @@
 #!/bin/sh
-adb uninstall gdg.devfest.ch
+adb uninstall de.gdg.devfest.ka

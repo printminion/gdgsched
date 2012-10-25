@@ -16,14 +16,15 @@
 
 package com.google.android.apps.iosched.util;
 
-import gdg.devfest.ch.Setup;
-import gdg.devfest.ch.R;
+import de.gdg.devfest.ka.R;
 
 import com.google.android.apps.iosched.calendar.SessionCalendarService;
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.ui.AccountActivity;
 import com.google.android.gcm.GCMRegistrar;
 import com.google.api.client.googleapis.extensions.android2.auth.GoogleAccountManager;
+
+import de.gdg.devfest.ka.Setup;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;

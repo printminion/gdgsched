@@ -16,11 +16,12 @@
 
 package com.google.android.apps.iosched.calendar;
 
-import gdg.devfest.ch.Setup;
-import gdg.devfest.ch.R;
+import de.gdg.devfest.ka.R;
 
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.util.UIUtils;
+
+import de.gdg.devfest.ka.Setup;
 
 import android.annotation.TargetApi;
 import android.app.AlarmManager;

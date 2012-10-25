@@ -16,9 +16,10 @@
 
 package com.google.android.apps.iosched.util;
 
-import gdg.devfest.ch.Setup;
 
 import com.google.android.apps.iosched.provider.ScheduleContract;
+
+import de.gdg.devfest.ka.Setup;
 
 import android.annotation.TargetApi;
 import android.app.Activity;

@@ -18,6 +18,8 @@ package com.google.android.apps.iosched.sync;
 
 import com.google.android.apps.iosched.io.HandlerException;
 
+import de.gdg.devfest.ka.Setup;
+
 import android.app.Service;
 import android.content.Intent;
 import android.os.Handler;
@@ -27,7 +29,6 @@ import android.os.Looper;
 import android.os.Message;
 import android.widget.Toast;
 
-import gdg.devfest.ch.Setup;
 
 import java.io.IOException;
 import java.util.ArrayList;

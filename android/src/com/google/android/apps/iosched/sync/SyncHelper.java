@@ -19,8 +19,7 @@ package com.google.android.apps.iosched.sync;
 import com.google.analytics.tracking.android.EasyTracker;
 import com.google.android.apps.iosched.Config;
 
-import gdg.devfest.ch.Setup;
-import gdg.devfest.ch.R;
+import de.gdg.devfest.ka.R;
 
 import com.google.android.apps.iosched.io.AnnouncementsHandler;
 import com.google.android.apps.iosched.io.BlocksHandler;
@@ -42,6 +41,8 @@ import com.google.api.client.googleapis.extensions.android2.auth.GoogleAccountMa
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonSyntaxException;
+
+import de.gdg.devfest.ka.Setup;
 
 import android.accounts.Account;
 import android.content.ContentProviderOperation;

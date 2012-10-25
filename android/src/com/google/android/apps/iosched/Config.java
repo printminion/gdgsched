@@ -32,7 +32,9 @@ public class Config {
     private static final String CONFERENCE_API_KEY = "AIzaSyA2MhtOhocnrkFvc_uyavMbrLj_Qi36Vak";
     private static final String ROOT_EVENT_ID = "gdgdevfest2012"; //googleio2012
     
-	private static final String BASE_URL = "http://20121019.mkupriyanov.appspot.com/api";
+	//private static final String BASE_URL = "http://20121019.mkupriyanov.appspot.com/api";
+	private static final String BASE_URL = "www.devfest.info/json/event/ag9zfmRldmZlc3RnbG9iYWxyDQsSBUV2ZW50GNKsBgw";
+	
      
     public static final String GET_ALL_SESSIONS_URL      = BASE_URL + "/sessions?parent_event=" + ROOT_EVENT_ID + "&api_key=" + CONFERENCE_API_KEY;
     public static final String GET_ALL_SPEAKERS_URL      = BASE_URL + "/speakers?event_id=" + ROOT_EVENT_ID + "&api_key=" + CONFERENCE_API_KEY;
@@ -40,11 +42,9 @@ public class Config {
     public static final String EDIT_MY_SCHEDULE_URL      = BASE_URL + "/editmyschedule/o/";
 
     
-    //public static final String BASE_SESSION_URL      =  "https://developers.google.com/events/io/sessions/";
     public static final String BASE_SESSION_URL      =  BASE_URL + "/events/io/sessions/";
     
     // Static file host for the sandbox data
-    //public static final String GET_SANDBOX_URL = "https://developers.google.com/events/io/sandbox-data";
     public static final String GET_SANDBOX_URL = BASE_URL + "/events/io/sandbox-data?parent_event=" + ROOT_EVENT_ID + "&api_key=" + CONFERENCE_API_KEY;
     
 
@@ -60,15 +60,9 @@ public class Config {
     public static final String SECONDARY_LIVESTREAM_TRACK = "chrome";
 
     // GCM config
-//    public static final String GCM_SERVER_URL = "https://iosched-gcm.appspot.com";
-//    public static final String GCM_SENDER_ID = "1009579170083"; // project ID from the APIs console
-    
     public static final String GCM_SERVER_URL = "http://2013.mkupriyanov.appspot.com";
     public static final String GCM_SENDER_ID = "903246180582"; // project ID from the APIs console
 
-
-//	public static final String AUTH_TOKEN_SCOPE = "https://www.googleapis.com/auth/developerssite";
-//	public static final String AUTH_TOKEN_SCOPE_READONLY = "https://www.googleapis.com/auth/developerssite.readonly";
 
 	public static final String AUTH_TOKEN_SCOPE = "https://2012.mkupriyanov.appspot.com/auth/gdgdevfest";
 	public static final String AUTH_TOKEN_SCOPE_READONLY = "https://2012.mkupriyanov.appspot.com/auth/gdgdevfest.readonly";

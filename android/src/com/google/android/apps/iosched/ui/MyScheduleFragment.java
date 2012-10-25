@@ -16,8 +16,7 @@
 
 package com.google.android.apps.iosched.ui;
 
-import gdg.devfest.ch.Setup;
-import gdg.devfest.ch.R;
+import de.gdg.devfest.ka.R;
 
 import com.google.android.apps.iosched.Config;
 import com.google.android.apps.iosched.provider.ScheduleContract;
@@ -29,6 +28,8 @@ import com.google.android.apps.iosched.util.UIUtils;
 import com.google.android.apps.iosched.util.actionmodecompat.ActionMode;
 
 import com.actionbarsherlock.app.SherlockListFragment;
+
+import de.gdg.devfest.ka.Setup;
 
 import android.app.Activity;
 import android.content.Context;

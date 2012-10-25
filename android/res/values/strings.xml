@@ -14,7 +14,7 @@
   limitations under the License.
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">GDG DevFest Zurich</string>
+    <string name="app_name">GDG DevFest Karlsruhe</string>
 
     <string name="description_search">Search</string>
     <string name="description_map">Map</string>
@@ -57,8 +57,8 @@
     <string name="all_tracks">All tracks</string>
     <string name="all_tracks_sessions">All sessions</string>
     <string name="all_tracks_vendors">All companies</string>
-    <string name="all_tracks_subtitle_sessions">All sessions at GDG DevFest 2012 Zurich.</string>
-    <string name="all_tracks_subtitle_vendors">All developer sandbox companies at GDG DevFest 2012 Zurich.</string>
+    <string name="all_tracks_subtitle_sessions">All sessions at GDG DevFest 2012 Karlsruhe.</string>
+    <string name="all_tracks_subtitle_vendors">All developer sandbox companies at GDG DevFest 2012 Karlsruhe.</string>
 
     <string name="empty_sessions">No sessions found.</string>
     <string name="empty_session_detail">No session details found.</string>
@@ -131,8 +131,8 @@
 
     <!-- EULA, login, and about -->
     <string name="description_choose_account"><![CDATA[
-        Welcome to the GDG DevFest 2012 Zurich app, your official companion to the GDG DevFest conference
-        taking place in Zurich from October 19th to October 21th, 2012.<br>
+        Welcome to the GDG DevFest 2012 Karlsruhe app, your official companion to the GDG DevFest conference
+        taking place in Karlsruhe November 3rd, 2012.<br>
         <br>
         <font color="#4683ec"><b>Sign in with the Google account you registered with to
         get started</b></font>.
@@ -147,8 +147,9 @@
     <string name="about_body"><![CDATA[
         <b>GDG DevFest 2012</b><br>
         Version %s<br><br>
+        <!--
         <a href="http://m.google.com/utos">Terms of Service</a><br><br>
-        <a href="http://www.google.com/policies/privacy/">Privacy Policy</a>
+        <a href="http://www.google.com/policies/privacy/">Privacy Policy</a>-->
     ]]></string>
 
     <!--suppress AndroidLintTypographyOther -->
@@ -188,8 +189,8 @@
     </plurals>
     <string name="snooze_x_min">Snooze <xliff:g id="remaining_time">%1$d</xliff:g> min.</string>
 
-    <string name="session_calendar_suffix">- added by GDG DevFest 2012 Zurich Android app</string>
-    <string name="toast_deleting_sessions_from_calendar">Removing your GDG DevFest 2012 Zurich sessions from Google Calendar&#8230;</string>
+    <string name="session_calendar_suffix">- added by GDG DevFest 2012 Karlsruhe Android app</string>
+    <string name="toast_deleting_sessions_from_calendar">Removing your GDG DevFest 2012 Karlsruhe sessions from Google Calendar&#8230;</string>
 
     <!-- Contextual help text -->
     <string name="help_add_to_schedule"><![CDATA[

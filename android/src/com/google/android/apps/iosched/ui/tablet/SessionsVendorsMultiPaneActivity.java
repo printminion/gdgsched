@@ -18,8 +18,7 @@ package com.google.android.apps.iosched.ui.tablet;
 
 import com.google.analytics.tracking.android.EasyTracker;
 
-import gdg.devfest.ch.Setup;
-import gdg.devfest.ch.R;
+import de.gdg.devfest.ka.R;
 
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.ui.BaseActivity;
@@ -35,6 +34,8 @@ import com.google.android.apps.iosched.util.UIUtils;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
+
+import de.gdg.devfest.ka.Setup;
 
 import android.annotation.TargetApi;
 import android.app.AlertDialog;

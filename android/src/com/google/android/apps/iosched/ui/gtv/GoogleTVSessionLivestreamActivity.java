@@ -19,7 +19,7 @@ package com.google.android.apps.iosched.ui.gtv;
 import com.google.analytics.tracking.android.EasyTracker;
 import com.google.android.apps.iosched.Config;
 
-import gdg.devfest.ch.R;
+import de.gdg.devfest.ka.R;
 
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.provider.ScheduleContract.Sessions;

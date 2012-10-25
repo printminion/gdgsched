@@ -18,8 +18,7 @@ package com.google.android.apps.iosched.util;
 
 import com.google.analytics.tracking.android.EasyTracker;
 
-import gdg.devfest.ch.Setup;
-import gdg.devfest.ch.R;
+import de.gdg.devfest.ka.R;
 
 import com.google.android.apps.iosched.appwidget.MyScheduleWidgetProvider;
 import com.google.android.apps.iosched.provider.ScheduleContract;
@@ -29,6 +28,8 @@ import com.google.android.apps.iosched.ui.SocialStreamActivity;
 import com.google.android.apps.iosched.ui.SocialStreamFragment;
 
 import com.actionbarsherlock.view.MenuItem;
+
+import de.gdg.devfest.ka.Setup;
 
 import android.annotation.TargetApi;
 import android.app.Activity;

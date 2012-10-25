@@ -18,6 +18,8 @@ package com.google.android.apps.iosched.provider;
 
 import com.google.android.apps.iosched.util.ParserUtils;
 
+import de.gdg.devfest.ka.Setup;
+
 import android.app.SearchManager;
 import android.graphics.Color;
 import android.net.Uri;
@@ -26,7 +28,6 @@ import android.provider.ContactsContract;
 import android.text.TextUtils;
 import android.text.format.DateUtils;
 
-import gdg.devfest.ch.Setup;
 
 import java.util.List;
 

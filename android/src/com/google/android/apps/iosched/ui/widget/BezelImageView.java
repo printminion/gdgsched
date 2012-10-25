@@ -16,7 +16,7 @@
 
 package com.google.android.apps.iosched.ui.widget;
 
-import gdg.devfest.ch.R;
+import de.gdg.devfest.ka.R;
 
 import android.content.Context;
 import android.content.res.TypedArray;

@@ -17,9 +17,9 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="gdg.devfest.ch"
-    android:versionCode="24"
-    android:versionName="0.24"
+    package="de.gdg.devfest.ka"
+    android:versionCode="25"
+    android:versionName="0.25"
     android:installLocation="auto">
 
     <uses-sdk
@@ -27,7 +27,7 @@
         android:targetSdkVersion="16" />
 
     <permission
-        android:name="gdg.devfest.ch.permission.WRITE_SCHEDULE"
+        android:name="de.gdg.devfest.ka.permission.WRITE_SCHEDULE"
         android:protectionLevel="normal"
         android:label="@string/permission_write"
         android:description="@string/permission_write" />
@@ -54,10 +54,10 @@
     <uses-permission
             android:name="com.google.android.c2dm.permission.RECEIVE" />
     <permission
-            android:name="gdg.devfest.ch.permission.C2D_MESSAGE"
+            android:name="de.gdg.devfest.ka.permission.C2D_MESSAGE"
             android:protectionLevel="signature" />
     <uses-permission
-            android:name="gdg.devfest.ch.permission.C2D_MESSAGE" />
+            android:name="de.gdg.devfest.ka.permission.C2D_MESSAGE" />
     
     <!-- required for Google TV - to support proper filtering in Google Play -->
     <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
@@ -73,13 +73,13 @@
         <!-- Activities for both phones and tablets -->
 
         <activity
-            android:name="gdg.devfest.ch.app.ui.AccountActivity"
+            android:name="de.gdg.devfest.ka.app.ui.AccountActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.Iosched.Accounts"
             android:configChanges="orientation|keyboardHidden" />
 
         <activity
-            android:name="gdg.devfest.ch.app.ui.HomeActivity"
+            android:name="de.gdg.devfest.ka.app.ui.HomeActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.Iosched.Home">
             <intent-filter>
@@ -89,14 +89,14 @@
         </activity>
 
         <activity
-            android:name="gdg.devfest.ch.app.ui.SocialStreamActivity"
+            android:name="de.gdg.devfest.ka.app.ui.SocialStreamActivity"
             android:label="@string/title_tagstream">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value="gdg.devfest.ch.app.ui.HomeActivity" />
+                android:value="de.gdg.devfest.ka.app.ui.HomeActivity" />
         </activity>
 
         <activity
-            android:name="gdg.devfest.ch.app.ui.SearchActivity"
+            android:name="de.gdg.devfest.ka.app.ui.SearchActivity"
             android:label="@string/title_search"
             android:launchMode="singleTop"
             android:theme="@style/Theme.Iosched.GreyBackground">
@@ -106,10 +106,10 @@
             </intent-filter>
             <meta-data android:name="android.app.searchable" android:resource="@xml/searchable" />
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value="gdg.devfest.ch.app.ui.HomeActivity" />
+                android:value="de.gdg.devfest.ka.app.ui.HomeActivity" />
         </activity>
 
-        <activity android:name="gdg.devfest.ch.app.ui.SessionLivestreamActivity"
+        <activity android:name="de.gdg.devfest.ka.app.ui.SessionLivestreamActivity"
             android:label="@string/session_livestream_title"
             android:configChanges="orientation|screenSize"
             android:theme="@style/Theme.Iosched.Livestream">
@@ -118,147 +118,147 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value="gdg.devfest.ch.app.ui.HomeActivity" />
+                android:value="de.gdg.devfest.ka.app.ui.HomeActivity" />
         </activity>
 
         <activity
-            android:name="gdg.devfest.ch.app.ui.BeamActivity"
+            android:name="de.gdg.devfest.ka.app.ui.BeamActivity"
             android:label="@string/title_beam"
             android:theme="@style/Theme.Iosched.GreyBackground">
             <!-- Default Beam handling activity -->
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="application/vnd.gdg.devfest.ch.default" />
+                <data android:mimeType="application/vnd.de.gdg.devfest.ka.default" />
             </intent-filter>
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value="gdg.devfest.ch.app.ui.HomeActivity" />
+                android:value="de.gdg.devfest.ka.app.ui.HomeActivity" />
         </activity>
 
         <!-- Phone-only activities -->
 
         <activity
-            android:name="gdg.devfest.ch.app.ui.phone.SessionsActivity"
+            android:name="de.gdg.devfest.ka.app.ui.phone.SessionsActivity"
             android:label="@string/title_sessions">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="vnd.android.cursor.dir/vnd.gdg.devfest.ch.session" />
+                <data android:mimeType="vnd.android.cursor.dir/vnd.de.gdg.devfest.ka.session" />
             </intent-filter>
             <!-- HomeActivity is the parent (as opposed to TrackDetailActivity) because
                  SessionsActivity is not used to show sessions for a given track. -->
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value="gdg.devfest.ch.app.ui.HomeActivity" />
+                android:value="de.gdg.devfest.ka.app.ui.HomeActivity" />
         </activity>
 
         <activity
-            android:name="gdg.devfest.ch.app.ui.phone.TrackDetailActivity"
+            android:name="de.gdg.devfest.ka.app.ui.phone.TrackDetailActivity"
             android:label="@string/title_tracks"
             android:theme="@style/Theme.Iosched.GreyBackground">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="vnd.android.cursor.item/vnd.gdg.devfest.ch.track" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.de.gdg.devfest.ka.track" />
             </intent-filter>
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value="gdg.devfest.ch.app.ui.HomeActivity" />
+                android:value="de.gdg.devfest.ka.app.ui.HomeActivity" />
         </activity>
 
-        <activity android:name="gdg.devfest.ch.app.ui.phone.SessionDetailActivity"
+        <activity android:name="de.gdg.devfest.ka.app.ui.phone.SessionDetailActivity"
             android:label="@string/title_session_detail"
             android:uiOptions="splitActionBarWhenNarrow">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="vnd.android.cursor.item/vnd.gdg.devfest.ch.session" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.de.gdg.devfest.ka.session" />
             </intent-filter>
             <!-- Android Beam for session details -->
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="vnd.android.cursor.item/vnd.gdg.devfest.ch.session" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.de.gdg.devfest.ka.session" />
             </intent-filter>
             <!-- PARENT_ACTIVITY alone is insufficient for Up navigation for this activity -->
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value="gdg.devfest.ch.app.ui.phone.SessionsActivity" />
+                android:value="de.gdg.devfest.ka.app.ui.phone.SessionsActivity" />
         </activity>
 
-        <activity android:name="gdg.devfest.ch.app.ui.phone.VendorDetailActivity"
+        <activity android:name="de.gdg.devfest.ka.app.ui.phone.VendorDetailActivity"
             android:label="@string/title_vendor_detail">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="vnd.android.cursor.item/vnd.gdg.devfest.ch.vendor" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.de.gdg.devfest.ka.vendor" />
             </intent-filter>
             <!-- PARENT_ACTIVITY alone is insufficient for Up navigation for this activity -->
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value="gdg.devfest.ch.app.ui.phone.TrackDetailActivity" />
+                android:value="de.gdg.devfest.ka.app.ui.phone.TrackDetailActivity" />
         </activity>
 
         <activity
-            android:name="gdg.devfest.ch.app.ui.phone.MapActivity"
+            android:name="de.gdg.devfest.ka.app.ui.phone.MapActivity"
             android:label="@string/title_map"
             android:configChanges="orientation|keyboardHidden">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value="gdg.devfest.ch.app.ui.HomeActivity" />
+                android:value="de.gdg.devfest.ka.app.ui.HomeActivity" />
         </activity>
 
         <!-- Tablet-only activities -->
 
         <activity
-            android:name="gdg.devfest.ch.app.ui.tablet.SessionsVendorsMultiPaneActivity"
+            android:name="de.gdg.devfest.ka.app.ui.tablet.SessionsVendorsMultiPaneActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.Iosched.GreyBackground">
             <!-- can show track details -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="vnd.android.cursor.item/vnd.gdg.devfest.ch.track" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.de.gdg.devfest.ka.track" />
             </intent-filter>
             <!-- can show session and vendor lists -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="vnd.android.cursor.dir/vnd.gdg.devfest.ch.session" />
+                <data android:mimeType="vnd.android.cursor.dir/vnd.de.gdg.devfest.ka.session" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="vnd.android.cursor.dir/vnd.gdg.devfest.ch.vendor" />
+                <data android:mimeType="vnd.android.cursor.dir/vnd.de.gdg.devfest.ka.vendor" />
             </intent-filter>
             <!-- can show session and vendor details -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="vnd.android.cursor.item/vnd.gdg.devfest.ch.session" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.de.gdg.devfest.ka.session" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="vnd.android.cursor.item/vnd.gdg.devfest.ch.vendor" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.de.gdg.devfest.ka.vendor" />
             </intent-filter>
             <!-- Android Beam for session details -->
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="vnd.android.cursor.item/vnd.gdg.devfest.ch.session" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.de.gdg.devfest.ka.session" />
             </intent-filter>
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value="gdg.devfest.ch.app.ui.HomeActivity" />
+                android:value="de.gdg.devfest.ka.app.ui.HomeActivity" />
         </activity>
 
         <activity
-            android:name="gdg.devfest.ch.app.ui.tablet.MapMultiPaneActivity"
+            android:name="de.gdg.devfest.ka.app.ui.tablet.MapMultiPaneActivity"
             android:label="@string/title_map"
             android:configChanges="orientation|keyboardHidden|screenSize">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value="gdg.devfest.ch.app.ui.HomeActivity" />
+                android:value="de.gdg.devfest.ka.app.ui.HomeActivity" />
         </activity>
 
         <!-- GTV Activities -->
 
         <activity
-            android:name="gdg.devfest.ch.app.ui.gtv.GoogleTVSessionLivestreamActivity"
+            android:name="de.gdg.devfest.ka.app.ui.gtv.GoogleTVSessionLivestreamActivity"
             android:theme="@style/Theme.Iosched.GoogleTV"
             android:label="@string/app_name">
             <intent-filter>
@@ -268,16 +268,16 @@
         </activity>
 
         <!-- Session alarm/calendar integrating components. -->
-        <receiver android:name="gdg.devfest.ch.app.calendar.SessionAlarmReceiver" >
+        <receiver android:name="de.gdg.devfest.ka.app.calendar.SessionAlarmReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="gdg.devfest.ch.action.UPDATE_CALENDAR_COMPLETED" />
+                <action android:name="de.gdg.devfest.ka.action.UPDATE_CALENDAR_COMPLETED" />
             </intent-filter>
         </receiver>
 
-        <service android:name="gdg.devfest.ch.app.calendar.SessionAlarmService" />
+        <service android:name="de.gdg.devfest.ka.app.calendar.SessionAlarmService" />
 
-        <service android:name="gdg.devfest.ch.app.calendar.SessionCalendarService"
+        <service android:name="de.gdg.devfest.ka.app.calendar.SessionCalendarService"
             android:enabled="@bool/has_ics" />
 
         <!-- Used for install referrer tracking -->
@@ -297,14 +297,14 @@
           The com.google.android.c2dm.permission.SEND permission is necessary
           so only GCM services can send data messages for the app.
         -->
-        <receiver android:name="gdg.devfest.ch.app.gcm.GCMRedirectedBroadcastReceiver"
+        <receiver android:name="de.gdg.devfest.ka.app.gcm.GCMRedirectedBroadcastReceiver"
             android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
                 <!-- Receives the actual messages. -->
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <!-- Receives the registration id. -->
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-                <category android:name="gdg.devfest.ch" />
+                <category android:name="de.gdg.devfest.ka" />
             </intent-filter>
         </receiver>
 
@@ -315,20 +315,20 @@
           By default, it must be named .GCMIntentService, unless the
           application uses a custom BroadcastReceiver that redefines its name.
         -->
-        <service android:name="gdg.devfest.ch.app.gcm.GCMIntentService" />
+        <service android:name="de.gdg.devfest.ka.app.gcm.GCMIntentService" />
 
         <!-- Data, sync and schedule editing components -->
 
         <provider
-            android:name="gdg.devfest.ch.app.provider.ScheduleProvider"
-            android:authorities="gdg.devfest.ch"
-            android:writePermission="gdg.devfest.ch.permission.WRITE_SCHEDULE"
+            android:name="de.gdg.devfest.ka.app.provider.ScheduleProvider"
+            android:authorities="de.gdg.devfest.ka"
+            android:writePermission="de.gdg.devfest.ka.permission.WRITE_SCHEDULE"
             android:syncable="true"
             android:label="@string/app_name" />
 
-        <service android:name="gdg.devfest.ch.app.sync.ScheduleUpdaterService" />
+        <service android:name="de.gdg.devfest.ka.app.sync.ScheduleUpdaterService" />
 
-        <service android:name="gdg.devfest.ch.app.sync.SyncService"
+        <service android:name="de.gdg.devfest.ka.app.sync.SyncService"
             android:exported="true"
             tools:ignore="ExportedService">
             <intent-filter>
@@ -340,17 +340,17 @@
 
         <!-- a simple receiver that triggers a sync for any message it receives. used by our
              GCM implementation -->
-        <receiver android:name="gdg.devfest.ch.app.sync.TriggerSyncReceiver" />
+        <receiver android:name="de.gdg.devfest.ka.app.sync.TriggerSyncReceiver" />
 
         <!-- Other manifest items -->
 
         <meta-data
             android:name="android.app.default_searchable"
-            android:value="gdg.devfest.ch.app.ui.SearchActivity" />
+            android:value="de.gdg.devfest.ka.app.ui.SearchActivity" />
 
         <!-- App widget components -->
 
-        <receiver android:name="gdg.devfest.ch.app.appwidget.MyScheduleWidgetProvider"
+        <receiver android:name="de.gdg.devfest.ka.app.appwidget.MyScheduleWidgetProvider"
             android:enabled="@bool/has_honeycomb">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -362,7 +362,7 @@
 
         <!-- The service serving the RemoteViews to the collection widget -->
 
-        <service android:name="gdg.devfest.ch.app.appwidget.MyScheduleWidgetService"
+        <service android:name="de.gdg.devfest.ka.app.appwidget.MyScheduleWidgetService"
             android:permission="android.permission.BIND_REMOTEVIEWS"
             android:exported="false"
             android:enabled="@bool/has_honeycomb" />

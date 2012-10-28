@@ -68,7 +68,7 @@
     <string name="empty_captions">No captions found for this session.</string>
 
     <string name="unknown_room">(Unspecified Room)</string>
-    <string name="codelab_room">Code Labs (Level 2)</string>
+    <string name="codelab_room">Codecamp (Raum 4)</string>
     <string name="keynote_room">Level 3</string>
 
     <string name="session_links">Links</string>

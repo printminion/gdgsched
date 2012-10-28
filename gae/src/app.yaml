@@ -5,7 +5,7 @@
 # Get it here if you don't have one: https://appengine.google.com/
 application: mkupriyanov
 # App version
-version: 20121019
+version: 20121103
 
 # Use Python 2.7 runtime here.
 # See this for more info: 

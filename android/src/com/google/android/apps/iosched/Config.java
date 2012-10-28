@@ -32,8 +32,8 @@ public class Config {
     private static final String CONFERENCE_API_KEY = "AIzaSyA2MhtOhocnrkFvc_uyavMbrLj_Qi36Vak";
     private static final String ROOT_EVENT_ID = "gdgdevfest2012"; //googleio2012
     
-	//private static final String BASE_URL = "http://20121019.mkupriyanov.appspot.com/api";
-	private static final String BASE_URL = "www.devfest.info/json/event/ag9zfmRldmZlc3RnbG9iYWxyDQsSBUV2ZW50GNKsBgw";
+	private static final String BASE_URL = "http://20121103.mkupriyanov.appspot.com/api";
+	//private static final String BASE_URL = "http://www.devfest.info/json/event/ag9zfmRldmZlc3RnbG9iYWxyDQsSBUV2ZW50GNKsBgw";
 	
      
     public static final String GET_ALL_SESSIONS_URL      = BASE_URL + "/sessions?parent_event=" + ROOT_EVENT_ID + "&api_key=" + CONFERENCE_API_KEY;
@@ -68,7 +68,7 @@ public class Config {
 	public static final String AUTH_TOKEN_SCOPE_READONLY = "https://2012.mkupriyanov.appspot.com/auth/gdgdevfest.readonly";
 	
 	public static final boolean FEATURE_MAP_ENABLED = false;
-	public static final boolean FEATURE_SESSION_URL_ENABLED = true;
+	public static final boolean FEATURE_SESSION_URL_ENABLED = false;
 	public static final boolean FEATURE_PLUSONE_ENABLED = false;
 	
 	public static final String GOOGLE_ANALYTICS = "UA-35397535-2";

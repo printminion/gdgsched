@@ -274,7 +274,7 @@ public class SessionDetailFragment extends SherlockFragment implements
         /*
          * remove plus one button while no session URL is there
          */
-        if (!Config.FEATURE_SESSION_URL_ENABLED) {
+        if (!Config.FEATURE_SESSION_URL_ENABLED || Config.FEATURE_PLUSONE_ENABLED) {
         	url = "";
         }
         if (TextUtils.isEmpty(url)) {

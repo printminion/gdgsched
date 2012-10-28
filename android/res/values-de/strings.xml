@@ -68,7 +68,7 @@
     <string name="empty_captions">Keine Untertitel für den Vortrag gefunden.</string>
 
     <string name="unknown_room">(Unbekannter Raum)</string>
-    <string name="codelab_room">Code Labs (Ebene 2)</string>
+    <string name="codelab_room">Codecamp (Raum 4)</string>
     <string name="keynote_room">Ebene 3</string>
 
     <string name="session_links">Links</string>

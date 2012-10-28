@@ -13,8 +13,8 @@ public class Setup implements ISetup {
 
 	public static TimeZone CONFERENCE_TIME_ZONE = TimeZone.getTimeZone("Europe/Berlin");
 	
-	public static long CONFERENCE_START_MILLIS = ParserUtils.parseTime("2012-10-19T09:00:00.000+02:00");
-	public static long CONFERENCE_END_MILLIS = ParserUtils.parseTime("2012-10-21T19:00:00.000+02:00");
+	public static long CONFERENCE_START_MILLIS = ParserUtils.parseTime("2012-11-03T08:30:00.000+01:00");
+	public static long CONFERENCE_END_MILLIS = ParserUtils.parseTime("2012-11-03T18:00:00.000+01:00");
 
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	public static final Class<?> getMyScheduleWidgetServiceClass() {

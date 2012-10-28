@@ -1,3 +1,4 @@
 eclipse.preferences.version=1
-encoding//src/com/kupriyanov/iosched/__init__.py=utf-8
 encoding//src/default.py=utf-8
+encoding//src/handlers.py=utf-8
+encoding//src/main.py=utf-8
